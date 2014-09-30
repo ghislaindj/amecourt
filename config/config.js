@@ -18,7 +18,7 @@ var config = {
     app: {
       name: 'amecourt'
     },
-    port: 3000,
+    port: 3100,
     db: 'mongodb://localhost/amecourt-staging'
 
   },
