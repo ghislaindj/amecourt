@@ -35,6 +35,7 @@ set :deploy_to, '/home/amecourt'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+set :copy_files, %w{node_modules}
 
 namespace :deploy do
 
