@@ -11,6 +11,12 @@ db.on('error', function () {
 });
 
 var homeCtrl  = require('./app/controllers/home'),
+    castleCtrl  = require('./app/controllers/castle'),
+    bnbCtrl  = require('./app/controllers/bnb'),
+    cottageCtrl  = require('./app/controllers/cottage'),
+    activitiesCtrl  = require('./app/controllers/activities'),
+    eventsCtrl  = require('./app/controllers/events'),
+    bookCtrl  = require('./app/controllers/book'),
     loginCtrl = require('./app/controllers/login'),
     adminCtrl = require('./app/controllers/admin');
 
@@ -23,8 +29,14 @@ var app = express();
 require('./config/express')(app, config);
 
 // Router
-
 app.get('/', homeCtrl.get);
+
+app.get('/chateau', castleCtrl.get);
+app.get('/chambres-d-hote', bnbCtrl.get);
+app.get('/gite', cottageCtrl.get);
+app.get('/activites', activitiesCtrl.get);
+app.get('/evenements', eventsCtrl.get);
+app.get('/reserver', bookCtrl.get);
 
 app.get('/admin', auth.private, adminCtrl.get);
 

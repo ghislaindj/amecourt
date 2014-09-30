@@ -9,7 +9,7 @@
 }
 
 a {
-  color: black;
+  color: #3e3d40;
   text-decoration: none;
 }
 
@@ -27,8 +27,9 @@ body {
 }
 
 * {
-  font-family: 'camingodos-web', sans-serif;
-  font-weight: 300;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 500;
+  color: #3e3d40;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,8 +46,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'camingodos-web', sans-serif;
-  font-weight: 300;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 500;
   color: #3e3d40;
   font-size: 14px;
   margin: 0;
@@ -54,8 +55,8 @@ h6 {
 
 h1,
 h2 {
-  font-family: 'camingodos-web', sans-serif;
-  font-weight: 200;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -112,8 +113,10 @@ header {
 
 header nav {
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.9);
-  text-align: center;
+  background: -webkit-gradient(linear, top left, bottom left, from(white), to(#ebebeb));
+  background: -webkit-linear-gradient(white, #ebebeb);
+  background: linear-gradient(white, #ebebeb);
+  text-align: left;
 }
 
 header nav li {
@@ -121,13 +124,45 @@ header nav li {
   vertical-align: top;
   height: 40px;
   line-height: 38px;
+}
+
+header nav li.icon a {
+  background: url("../img/logo.png") 50% 50% no-repeat;
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.15;
+  border-right: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+header nav li.alt {
+  float: right;
+}
+
+header nav li.alt a {
+  background-color: rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  height: 30px;
+  margin-right: 4px;
+  border-radius: 4px;
+  line-height: 31px;
+}
+
+header nav li a {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
   padding: 0 10px;
+}
+
+header nav li a:hover {
+  color: #989898;
 }
 
 #container {
   overflow: hidden;
   min-height: 100%;
-  margin-top: -40px;
   padding: 40px 0 120px 0;
 }
 
