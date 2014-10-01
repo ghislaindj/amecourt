@@ -105,6 +105,12 @@ header .content {
   }
 }
 
+#container {
+  overflow: hidden;
+  min-height: 100%;
+  padding: 40px 0 120px 0;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -112,21 +118,50 @@ header {
 }
 
 header nav {
+  margin: auto;
   height: 40px;
+  min-width: 320px;
+  max-width: 1600px;
   background: -webkit-gradient(linear, top left, bottom left, from(white), to(#ebebeb));
   background: -webkit-linear-gradient(white, #ebebeb);
   background: linear-gradient(white, #ebebeb);
   text-align: left;
 }
 
-header nav li {
+@media (max-width: 980px) {
+  header nav {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 980px) {
+  header nav ul {
+    display: none;
+  }
+}
+
+header nav ul li {
   display: inline-block;
   vertical-align: top;
   height: 40px;
   line-height: 38px;
 }
 
-header nav li.icon a {
+@media (max-width: 980px) {
+  header nav ul li {
+    display: block;
+    border-bottom: solid #b5b5b5 1px;
+    background-color: #fdfdfd;
+  }
+}
+
+@media (max-width: 980px) {
+  header nav ul li.icon {
+    display: none;
+  }
+}
+
+header nav ul li.icon a {
   background: url("../img/logo.png") 50% 50% no-repeat;
   -webkit-background-size: 30px 30px;
   background-size: 30px 30px;
@@ -136,11 +171,11 @@ header nav li.icon a {
   border-right: solid rgba(0, 0, 0, 0.5) 1px;
 }
 
-header nav li.alt {
+header nav ul li.alt {
   float: right;
 }
 
-header nav li.alt a {
+header nav ul li.alt a {
   background-color: rgba(0, 0, 0, 0.1);
   vertical-align: middle;
   height: 30px;
@@ -149,40 +184,75 @@ header nav li.alt a {
   line-height: 31px;
 }
 
-header nav li a {
+header nav ul li a {
   display: inline-block;
   vertical-align: top;
   height: 40px;
   padding: 0 10px;
 }
 
-header nav li a:hover {
+header nav ul li a:hover {
   color: #989898;
 }
 
-#container {
-  overflow: hidden;
-  min-height: 100%;
-  padding: 40px 0 120px 0;
+header nav .button {
+  display: none;
+  margin-top: -40px;
+  background: url("../img/logo.png") 50% 50% no-repeat;
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.15;
+  border-right: solid rgba(0, 0, 0, 0.5) 1px;
 }
 
-#container #main-title {
+@media (max-width: 980px) {
+  header nav .button {
+    display: block;
+  }
+}
+
+#home .main-title {
   width: 100%;
-  height: 700px;
   height: 54vw;
   background: url("../img/main-img.jpg") 50% 40% no-repeat;
   -webkit-background-size: 100%;
   background-size: 100%;
+  position: relative;
 }
 
-#container #main-title #main-logo {
+@media (max-width: 320px) {
+  #home .main-title {
+    height: 175px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .main-title {
+    height: 830px;
+  }
+}
+
+#home .prev {
   position: absolute;
-  top: 45vw;
-  left: 50%;
-  width: 500px;
-  height: 100px;
-  margin-left: -250px;
-  background: url("../img/main-logo.png") 50% 30% no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  width: 66px;
+  height: 100%;
+  top: 0;
+  background: url("../img/prev.png") 50% 50% no-repeat;
+  -webkit-background-size: 50%;
+  background-size: 50%;
+  cursor: pointer;
+}
+
+#home .next {
+  position: absolute;
+  width: 66px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url("../img/next.png") 50% 50% no-repeat;
+  -webkit-background-size: 50%;
+  background-size: 50%;
+  cursor: pointer;
 }
