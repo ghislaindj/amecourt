@@ -9,17 +9,73 @@
 
 
                 <div class="main-title">
-                    <div class="prev"></div>
-                    <div class="next"></div>
-                    
+                    <div id="mainprev" class="prev"></div>
+                    <div id="mainnext" class="next"></div>
+
+                    <div class="img img-1 current"></div>
+                    <div class="img img-2 right"></div>
+                    <div class="img img-3 right"></div>
+                    <div class="img img-4 right"></div>
+                    <div class="img img-5 right"></div>
                 </div>
-
-                
-
 
 
             </section>
             <%- include partials/footer.ejs %>
         </div>
+
+        <script>
+            document.getElementById('mainprev').addEventListener('click', function() {
+                var currentImg = document.getElementsByClassName('img current')[0],
+                    currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                    nextNum;
+
+                if(currentNum > 1){
+                    nextNum = currentNum - 1;
+                } else {
+                    nextNum = 5;
+                }
+
+                var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                currentImg.className = 'img img-' + (currentNum).toString();
+                nextImg.className += ' current';
+
+                if (nextImg.className.indexOf('left') == -1) {
+                    nextImg.className = 'img left unanimated img-' + (nextNum).toString();
+                }
+
+                setTimeout(function(){
+                    nextImg.className = 'img current img-' + (nextNum).toString();
+                    currentImg.className += ' right';
+                }, 20);
+            }, false);
+
+            document.getElementById('mainnext').addEventListener('click', function() {
+                var currentImg = document.getElementsByClassName('img current')[0],
+                    currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                    nextNum;
+
+                if(currentNum < 5){
+                    nextNum = currentNum + 1;
+                } else {
+                    nextNum = 1;
+                }
+
+                var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                currentImg.className = 'img img-' + (currentNum).toString();
+                nextImg.className += ' current';
+
+                if (nextImg.className.indexOf('right') == -1) {
+                    nextImg.className = 'img right unanimated img-' + (nextNum).toString();
+                }
+
+                setTimeout(function(){
+                    nextImg.className = 'img current img-' + (nextNum).toString();
+                    currentImg.className += ' left';
+                }, 20);
+            }, false);
+
+        </script>
+
     </body>
 </html>

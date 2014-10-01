@@ -214,12 +214,9 @@ header nav .button {
 }
 
 #home .main-title {
+  position: relative;
   width: 100%;
   height: 54vw;
-  background: url("../img/main-img.jpg") 50% 40% no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
-  position: relative;
 }
 
 @media (max-width: 320px) {
@@ -243,6 +240,7 @@ header nav .button {
   -webkit-background-size: 50%;
   background-size: 50%;
   cursor: pointer;
+  z-index: 1;
 }
 
 #home .next {
@@ -255,4 +253,60 @@ header nav .button {
   -webkit-background-size: 50%;
   background-size: 50%;
   cursor: pointer;
+  z-index: 1;
+}
+
+#home .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+#home .img.left {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+#home .img.right {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+#home .img.unanimated {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+#home .img.img-1 {
+  background: url("../img/main-img-1.jpg") 50% 40% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .img.img-2 {
+  background: url("../img/main-img-2.jpg") 50% 30% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .img.img-3 {
+  background: url("../img/main-img-3.jpg") 50% 80% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .img.img-4 {
+  background: url("../img/main-img-4.jpg") 50% 90% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .img.img-5 {
+  background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
