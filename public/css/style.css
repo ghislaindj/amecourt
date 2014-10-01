@@ -97,22 +97,16 @@ header .content {
   margin: auto;
 }
 
-@media (min-width: 1600px) {
-  #container,
-  header .content {
-    border-left: solid #d9dadb 1px;
-    border-right: solid #d9dadb 1px;
-  }
-}
-
 #container {
   overflow: hidden;
   min-height: 100%;
   padding: 40px 0 120px 0;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
 }
@@ -231,7 +225,19 @@ header nav .button {
   }
 }
 
-#home .prev {
+#home .main-title .txt {
+  font-family: "abril-titling-narrow", serif;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 70px;
+  width: 100%;
+  top: 50px;
+  text-align: center;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+}
+
+#home .main-title .prev {
   position: absolute;
   width: 66px;
   height: 100%;
@@ -243,7 +249,7 @@ header nav .button {
   z-index: 1;
 }
 
-#home .next {
+#home .main-title .next {
   position: absolute;
   width: 66px;
   height: 100%;
@@ -256,7 +262,7 @@ header nav .button {
   z-index: 1;
 }
 
-#home .img {
+#home .main-title .img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -264,48 +270,48 @@ header nav .button {
   transition: all ease-out 0.5s;
 }
 
-#home .img.left {
+#home .main-title .img.left {
   -webkit-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-#home .img.right {
+#home .main-title .img.right {
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
 
-#home .img.unanimated {
+#home .main-title .img.unanimated {
   -webkit-transition: none !important;
   transition: none !important;
 }
 
-#home .img.img-1 {
+#home .main-title .img.img-1 {
   background: url("../img/main-img-1.jpg") 50% 40% no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
 }
 
-#home .img.img-2 {
+#home .main-title .img.img-2 {
   background: url("../img/main-img-2.jpg") 50% 30% no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
 }
 
-#home .img.img-3 {
+#home .main-title .img.img-3 {
   background: url("../img/main-img-3.jpg") 50% 80% no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
 }
 
-#home .img.img-4 {
+#home .main-title .img.img-4 {
   background: url("../img/main-img-4.jpg") 50% 90% no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
 }
 
-#home .img.img-5 {
+#home .main-title .img.img-5 {
   background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
