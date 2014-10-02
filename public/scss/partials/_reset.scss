@@ -68,13 +68,13 @@ ul{
     max-width: $break-xlarge;
     min-width: $break-xsmall;
     margin: auto;
-//    @media (min-width: $break-xlarge){ border-left: solid $daily-grey-4 1px; border-right: solid $daily-grey-4 1px;}
 }
 
 #container{
+    position: relative;
     overflow: hidden;
     min-height: 100%;
 //    margin-top: -40px;
-    padding: 40px 0 120px 0;
+    padding: 40px 0 64px 0;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 }

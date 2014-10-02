@@ -1,83 +1,110 @@
 <!doctype html>
 <html lang="fr">
     <%- include partials/head.ejs %>
+    <script type="text/javascript" src="/js/map.js"></script>
+
     <body>
         <%- include partials/header.ejs %>
         <div id="container">
             <section id="home">
 
+                <section class="carousel">
+                    <div class="main-title">
+                        <div id="mainprev" class="prev"></div>
+                        <div id="mainnext" class="next"></div>
+                        <div class="txt">Chateau d'Amécourt</div>
 
+                        <div class="img img-1 current"></div>
+                        <div class="img img-2 right"></div>
+                        <div class="img img-3 right"></div>
+                        <div class="img img-4 right"></div>
+                        <div class="img img-5 right"></div>
+                    </div>
+                </section>
 
-                <div class="main-title">
-                    <div id="mainprev" class="prev"></div>
-                    <div id="mainnext" class="next"></div>
-                    
-                    <div class="txt">Chateau d'Amécourt</div>
+                <script>
+                    document.getElementById('mainprev').addEventListener('click', function() {
+                        var currentImg = document.getElementsByClassName('img current')[0],
+                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                            nextNum;
 
-                    <div class="img img-1 current"></div>
-                    <div class="img img-2 right"></div>
-                    <div class="img img-3 right"></div>
-                    <div class="img img-4 right"></div>
-                    <div class="img img-5 right"></div>
-                </div>
+                        if(currentNum > 1){
+                            nextNum = currentNum - 1;
+                        } else {
+                            nextNum = 5;
+                        }
 
+                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                        currentImg.className = 'img img-' + (currentNum).toString();
+                        nextImg.className += ' current';
+
+                        if (nextImg.className.indexOf('left') == -1) {
+                            nextImg.className = 'img left unanimated img-' + (nextNum).toString();
+                        }
+
+                        setTimeout(function(){
+                            nextImg.className = 'img current img-' + (nextNum).toString();
+                            currentImg.className += ' right';
+                        }, 20);
+                    }, false);
+
+                    document.getElementById('mainnext').addEventListener('click', function() {
+                        var currentImg = document.getElementsByClassName('img current')[0],
+                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                            nextNum;
+
+                        if(currentNum < 5){
+                            nextNum = currentNum + 1;
+                        } else {
+                            nextNum = 1;
+                        }
+
+                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                        currentImg.className = 'img img-' + (currentNum).toString();
+                        nextImg.className += ' current';
+
+                        if (nextImg.className.indexOf('right') == -1) {
+                            nextImg.className = 'img right unanimated img-' + (nextNum).toString();
+                        }
+
+                        setTimeout(function(){
+                            nextImg.className = 'img current img-' + (nextNum).toString();
+                            currentImg.className += ' left';
+                        }, 20);
+                    }, false);
+
+                </script>
+
+                <section class="intro-1">
+                    <div class="spacer">
+                        <div class="txt">
+                            A 80Km de Paris, <a href="#2">le Château d'Amécourt</a> et son parc de 8 hectares composé d'arbres multi-centenaires 
+                            vous accueillent pour un séjour dépaysant au coeur de la nature.
+                            Au sein de ce manoir du 18ème siècle <a href="#3">entièrement rénové</a>, nos <a href="#4">5 chambres d'hôte</a> et notre <a href="#5">gîte rural</a> peuvent accueillir jusqu'à 15 personnes.
+                            Une piscine, une salle des fêtes et une <a href="#6">table d'hôte</a> sont également à votre disposition. Ajouter un lien vers la page activités.
+                        </div>
+                    </div>
+                    <div class="img"></div>
+                </section>
+
+                <section class="intro-2">
+                    <div class="spacer">
+                        <div class="txt">
+                            Ici, écrire un texte qui fait le lien vers les pages mariages, évènements associatifs, équipement, partenaires et contact.
+                        </div>
+                    </div>
+                    <div class="img"></div>
+                </section>
+
+                <section class="map">
+                    <div id="map-canvas" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
+                </section>
 
             </section>
             <%- include partials/footer.ejs %>
         </div>
 
-        <script>
-            document.getElementById('mainprev').addEventListener('click', function() {
-                var currentImg = document.getElementsByClassName('img current')[0],
-                    currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
-                    nextNum;
 
-                if(currentNum > 1){
-                    nextNum = currentNum - 1;
-                } else {
-                    nextNum = 5;
-                }
-
-                var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
-                currentImg.className = 'img img-' + (currentNum).toString();
-                nextImg.className += ' current';
-
-                if (nextImg.className.indexOf('left') == -1) {
-                    nextImg.className = 'img left unanimated img-' + (nextNum).toString();
-                }
-
-                setTimeout(function(){
-                    nextImg.className = 'img current img-' + (nextNum).toString();
-                    currentImg.className += ' right';
-                }, 20);
-            }, false);
-
-            document.getElementById('mainnext').addEventListener('click', function() {
-                var currentImg = document.getElementsByClassName('img current')[0],
-                    currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
-                    nextNum;
-
-                if(currentNum < 5){
-                    nextNum = currentNum + 1;
-                } else {
-                    nextNum = 1;
-                }
-
-                var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
-                currentImg.className = 'img img-' + (currentNum).toString();
-                nextImg.className += ' current';
-
-                if (nextImg.className.indexOf('right') == -1) {
-                    nextImg.className = 'img right unanimated img-' + (nextNum).toString();
-                }
-
-                setTimeout(function(){
-                    nextImg.className = 'img current img-' + (nextNum).toString();
-                    currentImg.className += ' left';
-                }, 20);
-            }, false);
-
-        </script>
 
     </body>
 </html>

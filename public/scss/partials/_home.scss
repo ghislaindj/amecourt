@@ -1,76 +1,158 @@
 #home{
-    .main-title{
+    .carousel{
+        .main-title{
+            position: relative;
+            width: 100%;
+            height: 54vw;
+            @media (max-width: $break-xsmall){height: 175px;}
+            @media (min-width: $break-xlarge){height: 830px;}
+
+            .txt{
+                font-family: "abril-titling-narrow", serif;
+                position: absolute;
+                z-index: 2;
+                color: white;
+                font-size: 70px;
+                width: 100%; top: 50px;
+                text-align: center;
+                text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            .prev{
+                position: absolute;
+                width: 66px;
+                height: 100%;
+                top: 0;
+                background: url("../img/prev.png") 50% 50% no-repeat;
+                background-size: 50%;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .next{
+                position: absolute;
+                width: 66px;
+                height: 100%;
+                top: 0; right: 0;
+                background: url("../img/next.png") 50% 50% no-repeat;
+                background-size: 50%;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .img{
+                position: absolute;
+                width: 100%; height: 100%;
+                transition: all ease-out 0.5s;
+                &.left{transform: translate3d(-100%, 0, 0);}
+                &.right{transform: translate3d(100%, 0, 0);}
+                &.unanimated{transition: none !important;}
+
+                &.img-1{
+                    background: url("../img/main-img-1.jpg") 50% 40% no-repeat;
+                    background-size: 100% auto;
+                }
+
+                &.img-2{
+                    background: url("../img/main-img-2.jpg") 50% 30% no-repeat;
+                    background-size: 100% auto;
+                }
+
+                &.img-3{
+                    background: url("../img/main-img-3.jpg") 50% 80% no-repeat;
+                    background-size: 100% auto;
+                }
+
+                &.img-4{
+                    background: url("../img/main-img-4.jpg") 50% 90% no-repeat;
+                    background-size: 100% auto;
+                }
+
+                &.img-5{
+                    background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+        }
+    }
+
+    .intro-1{
         position: relative;
         width: 100%;
         height: 54vw;
-        @media (max-width: $break-xsmall){height: 175px;}
-        @media (min-width: $break-xlarge){height: 830px;}
+        line-height: 54vw;
+        background-color: #ecedf0;
+        overflow: hidden;
+        border-top: solid rgb(207, 209, 223) 4px;
+        border-bottom: solid rgb(207, 209, 223) 4px;
 
-        .txt{
-            font-family: "abril-titling-narrow", serif;
-            position: absolute;
-            z-index: 2;
-            color: white;
-            font-size: 70px;
-            width: 100%; top: 50px;
-            text-align: center;
-            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
-        }
+        @media (max-width: $break-xsmall){height: 175px; line-height: 175px;}
+        @media (min-width: $break-xlarge){height: 830px; line-height: 830px;}
 
-        .prev{
+        .spacer{
             position: absolute;
-            width: 66px;
-            height: 100%;
-            top: 0;
-            background: url("../img/prev.png") 50% 50% no-repeat;
-            background-size: 50%;
-            cursor: pointer;
-            z-index: 1;
-        }
+            top: 0; left: 4%;
+            width: 42%; height: 100%;
 
-        .next{
-            position: absolute;
-            width: 66px;
-            height: 100%;
-            top: 0; right: 0;
-            background: url("../img/next.png") 50% 50% no-repeat;
-            background-size: 50%;
-            cursor: pointer;
-            z-index: 1;
+            .txt{
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 200;
+                font-size: 22px;
+                line-height: 28px;
+            }
         }
 
         .img{
             position: absolute;
-            width: 100%; height: 100%;
-            transition: all ease-out 0.5s;
-            &.left{transform: translate3d(-100%, 0, 0);}
-            &.right{transform: translate3d(100%, 0, 0);}
-            &.unanimated{transition: none !important;}
+            left: 50%; width: 50%; height: 100%;
+            background: url("../img/main-side-1.jpg") 50% 90% no-repeat;
+            background-size: auto 140%;
+        }
+    }
+    
+    .intro-2{
+        position: relative;
+        width: 100%;
+        height: 54vw;
+        line-height: 54vw;
+        background-color: #ecedf0;
+        overflow: hidden;
+        border-top: solid rgb(207, 209, 223) 4px;
+        border-bottom: solid rgb(207, 209, 223) 4px;
 
-            &.img-1{
-                background: url("../img/main-img-1.jpg") 50% 40% no-repeat;
-                background-size: 100% auto;
-            }
+        @media (max-width: $break-xsmall){height: 175px; line-height: 175px;}
+        @media (min-width: $break-xlarge){height: 830px; line-height: 830px;}
 
-            &.img-2{
-                background: url("../img/main-img-2.jpg") 50% 30% no-repeat;
-                background-size: 100% auto;
-            }
+        .spacer{
+            position: absolute;
+            top: 0; left: 54%;
+            width: 42%; height: 100%;
 
-            &.img-3{
-                background: url("../img/main-img-3.jpg") 50% 80% no-repeat;
-                background-size: 100% auto;
-            }
-
-            &.img-4{
-                background: url("../img/main-img-4.jpg") 50% 90% no-repeat;
-                background-size: 100% auto;
-            }
-
-            &.img-5{
-                background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
-                background-size: 100% auto;
+            .txt{
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 200;
+                font-size: 22px;
+                line-height: 28px;
             }
         }
+
+        .img{
+            position: absolute;
+            left: 0; width: 50%; height: 100%;
+            background: url("../img/main-side-2.jpg") 70% 20% no-repeat;
+            background-size: auto 130%;
+        }
+    }
+
+    .map{
+        position: relative;
+        width: 100%;
+        height: 42vw;
+        border-bottom: solid rgb(207, 209, 223) 4px;
+
+        @media (max-width: $break-xsmall){height: 175px;}
+        @media (min-width: $break-xlarge){height: 630px;}
     }
 }
