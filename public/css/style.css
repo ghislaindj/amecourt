@@ -171,6 +171,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 
 header nav {
@@ -493,22 +494,8 @@ footer .col a:not(:last-child) {
   padding: 10px;
 }
 
-@media (max-width: 320px) {
-  #home .intro-1 {
-    height: 175px;
-    line-height: 175px;
-  }
-}
-
-@media (min-width: 1600px) {
-  #home .intro-1 {
-    height: 830px;
-    line-height: 830px;
-  }
-}
-
 #home .intro-1 .btn {
-  margin: 10px;
+  margin: 6px 9px 10px 9px;
   -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
@@ -519,6 +506,25 @@ footer .col a:not(:last-child) {
   height: 30vw;
   width: 50%;
   position: relative;
+}
+
+@media (max-width: 980px) {
+  #home .intro-1 .block {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #home .intro-1 .block {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .intro-1 .block {
+    height: 460px;
+  }
 }
 
 #home .intro-1 .block .spacer {
@@ -534,6 +540,24 @@ footer .col a:not(:last-child) {
   background-color: #f2f3f4;
   -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 980px) {
+  #home .intro-1 .block .spacer {
+    line-height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #home .intro-1 .block .spacer {
+    line-height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .intro-1 .block .spacer {
+    line-height: 460px;
+  }
 }
 
 #home .intro-1 .block .spacer .txt {
@@ -555,21 +579,21 @@ footer .col a:not(:last-child) {
 }
 
 #home .intro-1 .block .spacer .room.room-1 {
-  background: url("../img/main-room-1.jpg") 50% 90% no-repeat;
-  -webkit-background-size: auto 140%;
-  background-size: auto 140%;
+  background: url("../img/main-room-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 #home .intro-1 .block .spacer .room.room-2 {
-  background: url("../img/main-room-2.jpg") 50% 90% no-repeat;
-  -webkit-background-size: auto 140%;
-  background-size: auto 140%;
+  background: url("../img/main-room-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 #home .intro-1 .block .spacer .room.room-3 {
-  background: url("../img/main-room-3.jpg") 50% 90% no-repeat;
-  -webkit-background-size: auto 140%;
-  background-size: auto 140%;
+  background: url("../img/main-room-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 #home .intro-1 .block .spacer .title {
