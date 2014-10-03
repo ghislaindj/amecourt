@@ -14,7 +14,7 @@ a {
 }
 
 body {
-  background-color: #fbfbfb;
+  background-color: #fcfcfc;
 }
 
 .noty {
@@ -104,6 +104,67 @@ header .content {
   padding: 40px 0 64px 0;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  line-height: 42px;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  background-color: #3e3d40;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active {
+  background-color: #78d7ff;
+  text-decoration: none;
+  outline: 0;
+  color: #3e3d40;
+}
+
+.btn:hover .icon .white,
+.btn:focus .icon .white,
+.btn.active .icon .white {
+  opacity: 1;
+}
+
+.btn:hover .icon .black,
+.btn:focus .icon .black,
+.btn.active .icon .black {
+  opacity: 1;
+}
+
+.btn:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn .icon {
+  position: relative;
+}
+
+.btn .icon .ico {
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.btn .icon .black {
+  position: absolute;
+  left: 0;
+  opacity: 0;
 }
 
 header {
@@ -302,12 +363,12 @@ footer .col a:not(:last-child) {
 #home .carousel .main-title {
   position: relative;
   width: 100%;
-  height: 54vw;
+  height: 48vw;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 589px) {
   #home .carousel .main-title {
-    height: 175px;
+    height: 220px;
   }
 }
 
@@ -322,11 +383,25 @@ footer .col a:not(:last-child) {
   position: absolute;
   z-index: 2;
   color: white;
-  font-size: 70px;
   width: 100%;
-  top: 50px;
+  top: 3.5vw;
   text-align: center;
   text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+  font-size: 4.8vw;
+}
+
+@media (max-width: 589px) {
+  #home .carousel .main-title .txt {
+    font-size: 26px;
+    top: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .carousel .main-title .txt {
+    font-size: 80px;
+    top: 50px;
+  }
 }
 
 #home .carousel .main-title .prev {
@@ -412,12 +487,10 @@ footer .col a:not(:last-child) {
 #home .intro-1 {
   position: relative;
   width: 100%;
-  height: 54vw;
-  line-height: 54vw;
   background-color: #ecedf0;
   overflow: hidden;
   border-top: solid #cfd1df 4px;
-  border-bottom: solid #cfd1df 4px;
+  padding: 10px;
 }
 
 @media (max-width: 320px) {
@@ -434,30 +507,85 @@ footer .col a:not(:last-child) {
   }
 }
 
-#home .intro-1 .spacer {
-  position: absolute;
-  top: 0;
-  left: 4%;
-  width: 42%;
-  height: 100%;
+#home .intro-1 .btn {
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-#home .intro-1 .spacer .txt {
+#home .intro-1 .block {
+  display: inline-block;
+  vertical-align: top;
+  height: 30vw;
+  width: 50%;
+  position: relative;
+}
+
+#home .intro-1 .block .spacer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  line-height: 30vw;
+  border: solid #c7cad0 1px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f2f3f4;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+#home .intro-1 .block .spacer .txt {
   display: inline-block;
   vertical-align: middle;
+  padding: 0 20px;
   font-weight: 200;
   font-size: 22px;
   line-height: 28px;
+  text-align: center;
 }
 
-#home .intro-1 .img {
+#home .intro-1 .block .spacer .room {
   position: absolute;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  background: url("../img/main-side-1.jpg") 50% 90% no-repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#home .intro-1 .block .spacer .room.room-1 {
+  background: url("../img/main-room-1.jpg") 50% 90% no-repeat;
   -webkit-background-size: auto 140%;
   background-size: auto 140%;
+}
+
+#home .intro-1 .block .spacer .room.room-2 {
+  background: url("../img/main-room-2.jpg") 50% 90% no-repeat;
+  -webkit-background-size: auto 140%;
+  background-size: auto 140%;
+}
+
+#home .intro-1 .block .spacer .room.room-3 {
+  background: url("../img/main-room-3.jpg") 50% 90% no-repeat;
+  -webkit-background-size: auto 140%;
+  background-size: auto 140%;
+}
+
+#home .intro-1 .block .spacer .title {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+
+#home .intro-1 .block .spacer .title .price {
+  font-size: 20px;
+  color: white;
 }
 
 #home .intro-2 {
@@ -469,6 +597,7 @@ footer .col a:not(:last-child) {
   overflow: hidden;
   border-top: solid #cfd1df 4px;
   border-bottom: solid #cfd1df 4px;
+  padding: 20px;
 }
 
 @media (max-width: 320px) {
