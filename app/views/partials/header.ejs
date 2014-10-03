@@ -1,8 +1,8 @@
 <header>
-    <nav>
-        <div class="button"></div>
+    <nav id="main-nav">
+        <div id="navbutton"></div>
 
-        <ul class="nav">
+        <ul>
             <li class="icon"><a href="/"></a>
             </li><li><a href="/chateau">Le château</a>
             </li><li><a href="/chambres-d-hote">Chambres d’hôtes &amp; Gîte</a>
@@ -12,3 +12,15 @@
         </ul>
     </nav>
 </header>
+
+
+<script>
+    document.getElementById('navbutton').addEventListener('click', function() {
+        var nav = document.getElementById('main-nav');
+        if (nav.className.indexOf('oppened') == -1){
+            nav.className = 'oppened';
+        } else {
+            nav.className = '';
+        }
+    }, false);
+</script>

@@ -207,7 +207,7 @@ header nav ul li {
 @media (max-width: 980px) {
   header nav ul li {
     display: block;
-    border-bottom: solid #b5b5b5 1px;
+    border-bottom: solid #dfdfe8 1px;
     background-color: #fdfdfd;
   }
 }
@@ -232,6 +232,14 @@ header nav ul li.alt {
   float: right;
 }
 
+@media (max-width: 980px) {
+  header nav ul li.alt {
+    width: 100%;
+    padding-left: 6px;
+    float: none;
+  }
+}
+
 header nav ul li.alt a {
   background-color: rgba(0, 0, 0, 0.1);
   vertical-align: middle;
@@ -252,7 +260,8 @@ header nav ul li a:hover {
   color: #989898;
 }
 
-header nav .button {
+header nav #navbutton {
+  cursor: pointer;
   display: none;
   margin-top: -40px;
   background: url("../img/logo.png") 50% 50% no-repeat;
@@ -264,10 +273,22 @@ header nav .button {
   border-right: solid rgba(0, 0, 0, 0.5) 1px;
 }
 
+header nav #navbutton:hover {
+  background-color: grey;
+}
+
+header nav #navbutton:active {
+  background-color: #a8a8a8;
+}
+
 @media (max-width: 980px) {
-  header nav .button {
+  header nav #navbutton {
     display: block;
   }
+}
+
+header nav.oppened ul {
+  display: block;
 }
 
 footer {

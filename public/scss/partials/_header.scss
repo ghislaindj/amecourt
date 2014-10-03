@@ -24,7 +24,7 @@ header{
 
                 @media (max-width: $break-medium){
                     display: block;
-                    border-bottom: solid #b5b5b5 1px;
+                    border-bottom: solid #dfdfe8 1px;
                     background-color: #fdfdfd;
                 }
 
@@ -43,6 +43,12 @@ header{
 
                 &.alt{
                     float: right;
+
+                    @media (max-width: $break-medium){
+                        width: 100%;
+                        padding-left: 6px;
+                        float: none;
+                    }
 
                     a{
                         background-color: rgba(0, 0, 0, 0.10);
@@ -65,7 +71,8 @@ header{
             }
         }
 
-        .button{
+        #navbutton{
+            cursor: pointer;
             display: none;
             margin-top: -40px;
             background: url("../img/logo.png") 50% 50% no-repeat;
@@ -74,8 +81,14 @@ header{
             height: 40px;
             opacity: 0.15;
             border-right: solid rgba(0, 0, 0, 0.5) 1px;
+            &:hover{background-color: grey;}
+            &:active{background-color: #a8a8a8;}
 
             @media (max-width: $break-medium){display: block;}
+        }
+
+        &.oppened ul{
+            display: block;
         }
     }
 }
