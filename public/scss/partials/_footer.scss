@@ -4,7 +4,7 @@ footer{
     padding: 20px 0 12px 0;
 padding-top: 20px;
     padding-bottom: 12px;
-    
+
     margin-left: 40px;
     margin-right: 40px;
 
@@ -38,8 +38,8 @@ padding-top: 20px;
 
         a{
             font-size: 14px;
-            color: $fluo-blue;
-            &:not(:last-child){padding-right:10px;} 
+            color: $dark-blue;
+            &:not(:last-child){padding-right:10px;}
             @media (max-width: $break-small){&:not(:last-child){padding-right:4px;}}
         }
     }

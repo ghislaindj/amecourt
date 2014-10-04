@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
 
+
   var reloadPort = 35729, files;
 
   grunt.initConfig({
@@ -15,6 +16,13 @@ module.exports = function (grunt) {
     develop: {
       server: {
         file: 'app.js'
+      }
+    },
+    sass: {
+      dist: {
+        files: {
+          'public/css/style.css' : 'public/scss/style.scss'
+        }
       }
     },
     watch: {
@@ -36,6 +44,10 @@ module.exports = function (grunt) {
           'app/views/**/*.ejs'
         ],
         options: { livereload: reloadPort }
+      },
+      css: {
+        files: 'public/**/*.scss',
+        tasks: ['sass']
       }
     }
   });
@@ -58,5 +70,6 @@ module.exports = function (grunt) {
     }, 500);
   });
 
-  grunt.registerTask('default', ['develop', 'watch']);
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.registerTask('default', ['develop', 'watch', 'sass']);
 };
