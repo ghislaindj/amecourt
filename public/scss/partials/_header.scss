@@ -1,0 +1,94 @@
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    nav{
+        margin: auto;
+        height: 40px;
+        min-width: $break-xsmall;
+        max-width: $break-xlarge;
+        background: linear-gradient(#fff, #ebebeb);
+        text-align: left;
+        @media (max-width: $break-medium){padding-top: 40px;}
+
+        ul{
+            @media (max-width: $break-medium){display: none;}
+
+            li{
+                display: inline-block;
+                vertical-align: top;
+                height: 40px;
+                line-height: 38px;
+
+                @media (max-width: $break-medium){
+                    display: block;
+                    border-bottom: solid #dfdfe8 1px;
+                    background-color: #fdfdfd;
+                }
+
+                &.icon{
+                    @media (max-width: $break-medium){display: none;}
+
+                    a{
+                        background: url("../img/logo.png") 50% 50% no-repeat;
+                        background-size: 30px 30px;
+                        width: 40px;
+                        height: 40px;
+                        opacity: 0.15;
+                        border-right: solid rgba(0, 0, 0, 0.5) 1px;
+                    }
+                }
+
+                &.alt{
+                    float: right;
+
+                    @media (max-width: $break-medium){
+                        width: 100%;
+                        padding-left: 6px;
+                        float: none;
+                    }
+
+                    a{
+                        background-color: rgba(0, 0, 0, 0.10);
+                        vertical-align: middle;
+                        height: 30px;
+                        margin-right: 4px;
+                        border-radius: 4px;
+                        line-height: 31px;
+                    }
+                }
+
+                a{
+                    //                background-color: red;
+                    display: inline-block;
+                    vertical-align: top;
+                    height: 40px;
+                    padding: 0 10px;
+                    &:hover{color: #989898;}
+                }
+            }
+        }
+
+        #navbutton{
+            cursor: pointer;
+            display: none;
+            margin-top: -40px;
+            background: url("../img/logo.png") 50% 50% no-repeat;
+            background-size: 30px 30px;
+            width: 40px;
+            height: 40px;
+            opacity: 0.15;
+            border-right: solid rgba(0, 0, 0, 0.5) 1px;
+            &:hover{background-color: grey;}
+            &:active{background-color: #a8a8a8;}
+
+            @media (max-width: $break-medium){display: block;}
+        }
+
+        &.oppened ul{
+            display: block;
+        }
+    }
+}

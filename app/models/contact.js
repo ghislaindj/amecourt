@@ -1,10 +1,10 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
-var BookSchema = new Schema({
+var ContactSchema = new Schema({
   title: String,
   email: String,
   text: String
 });
 
-mongoose.model('Article', BookSchema);
+mongoose.model('Contact', ContactSchema);

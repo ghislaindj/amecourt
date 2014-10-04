@@ -1,17 +1,146 @@
 <!doctype html>
 <html lang="fr">
     <%- include partials/head.ejs %>
+    <script type="text/javascript" src="/js/map.js"></script>
+
     <body>
         <%- include partials/header.ejs %>
         <div id="container">
-            <section id="main-title">
-                <!--<div id="main-logo"></div>-->
-            </section>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et arcu eu nunc aliquam luctus vel ac nisi. Duis accumsan fringilla leo quis sodales. Nullam egestas tristique ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec turpis lectus, pellentesque at iaculis eget, aliquet sit amet leo. Aenean vehicula mauris sed turpis mattis, eu venenatis urna vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam molestie enim nibh, nec posuere arcu euismod eget. Ut porttitor molestie dapibus. Nam ullamcorper purus eu ex sagittis, ut euismod nulla auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam enim tellus, porttitor et facilisis eget, hendrerit id diam. Cras nisl odio, tincidunt sed justo a, mollis blandit urna. Pellentesque maximus scelerisque iaculis. Duis pretium nunc sed faucibus sagittis. Etiam facilisis tortor nec libero fringilla, sit amet commodo sapien pulvinar. Vivamus vehicula velit ut lacus vehicula, nec egestas magna malesuada. Integer commodo volutpat pharetra </p>-->
-            
-            
-            <%- include partials/footer.ejs %>
+            <section id="home">
 
+                <section class="carousel">
+                    <div class="main-title">
+                        <div id="mainprev" class="prev"></div>
+                        <div id="mainnext" class="next"></div>
+                        <div class="txt">Chateau d'Amécourt</div>
+
+                        <div class="img img-1 current"></div>
+                        <div class="img img-2 right"></div>
+                        <div class="img img-3 right"></div>
+                        <div class="img img-4 right"></div>
+                        <div class="img img-5 right"></div>
+                    </div>
+                </section>
+
+                <script>
+                    document.getElementById('mainprev').addEventListener('click', function() {
+                        var currentImg = document.getElementsByClassName('img current')[0],
+                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                            nextNum;
+
+                        if(currentNum > 1){
+                            nextNum = currentNum - 1;
+                        } else {
+                            nextNum = 5;
+                        }
+
+                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                        currentImg.className = 'img img-' + (currentNum).toString();
+                        nextImg.className += ' current';
+
+                        if (nextImg.className.indexOf('left') == -1) {
+                            nextImg.className = 'img left unanimated img-' + (nextNum).toString();
+                        }
+
+                        setTimeout(function(){
+                            nextImg.className = 'img current img-' + (nextNum).toString();
+                            currentImg.className += ' right';
+                        }, 20);
+                    }, false);
+
+                    document.getElementById('mainnext').addEventListener('click', function() {
+                        var currentImg = document.getElementsByClassName('img current')[0],
+                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
+                            nextNum;
+
+                        if(currentNum < 5){
+                            nextNum = currentNum + 1;
+                        } else {
+                            nextNum = 1;
+                        }
+
+                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
+                        currentImg.className = 'img img-' + (currentNum).toString();
+                        nextImg.className += ' current';
+
+                        if (nextImg.className.indexOf('right') == -1) {
+                            nextImg.className = 'img right unanimated img-' + (nextNum).toString();
+                        }
+
+                        setTimeout(function(){
+                            nextImg.className = 'img current img-' + (nextNum).toString();
+                            currentImg.className += ' left';
+                        }, 20);
+                    }, false);
+
+                </script>
+
+                <section class="intro-1">
+                    <div class="block">
+                        <div class="spacer">
+                            <div class="txt">
+                                <div>Un séjour au coeur de la nature</div>
+                                A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
+                            </div>
+                        </div>
+                    </div><div class="block">
+                    <div class="spacer">
+                        <div class="room room-1">
+                            <div class="title">La chambre verte<br/><div class="price">2 pers. | 65€/nuit</div></div>
+
+                        </div>
+                    </div>
+                    </div><div class="block">
+                    <div class="spacer">
+                        <div class="room room-2">
+                            <div class="title">La maison de chasse<br/><div class="price">4 pers. | 95€/nuit</div></div>
+
+                        </div>
+                    </div>
+                    </div><div class="block">
+                    <div class="spacer">
+                        <div class="room room-3">
+                            <div class="title">Le gîte rural<br/><div class="price">5 pers. | 350€/semaine</div></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="btn">Voir toutes les chambres</div>
+
+                </section>
+
+                <section class="intro-2">
+                    <div class="block" style="height: 60vw;">
+                        <div class="spacer">
+                            <div class="event event-1"></div>
+                        </div>
+                    </div><div class="block">
+                    <div class="subspacer">
+                        <div class="spacer">
+                            <div class="txt">
+                                <div>Un lieu d'exception pour vos réceptions</div>
+                                Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="subspacer">
+                        <div class="spacer">
+                            <div class="event event-2"></div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <section class="map">
+                    <div id="map-canvas" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
+                </section>
+
+            </section>
+            <%- include partials/footer.ejs %>
         </div>
+
+
+
     </body>
 </html>

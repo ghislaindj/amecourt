@@ -1,13 +1,26 @@
 <header>
-    <nav>
-        <ul class="nav">
+    <nav id="main-nav">
+        <div id="navbutton"></div>
+
+        <ul>
             <li class="icon"><a href="/"></a>
             </li><li><a href="/chateau">Le château</a>
-            </li><li><a href="/chambres-d-hote">Les chambres d'hôte</a>
-            </li><li><a href="/gite">Le gite</a>
-            </li><li><a href="/activites">Les activités</a>
-            </li><li><a href="/evenements">Organisation d'évènements</a>
-            </li><li class="alt"><a href="/contact">Réserver une chambre</a>
+            </li><li><a href="/chambres-d-hote">Chambres d’hôtes &amp; Gîte</a>
+            </li><li><a href="/evenements">Mariages &amp; évènements</a>
+            </li><li><a href="/activites">Autour d'Amécourt</a>
+            </li><li class="alt"><a href="/reserver">Contacter les châtelains</a>
         </ul>
     </nav>
 </header>
+
+
+<script>
+    document.getElementById('navbutton').addEventListener('click', function() {
+        var nav = document.getElementById('main-nav');
+        if (nav.className.indexOf('oppened') == -1){
+            nav.className = 'oppened';
+        } else {
+            nav.className = '';
+        }
+    }, false);
+</script>
