@@ -10,20 +10,21 @@ db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.db);
 });
 
+var models = glob.sync(config.root + '/app/models/*.js');
+models.forEach(function (model) {
+  require(model);
+});
+
 var homeCtrl  = require('./app/controllers/home'),
     castleCtrl  = require('./app/controllers/castle'),
     bnbCtrl  = require('./app/controllers/bnb'),
     cottageCtrl  = require('./app/controllers/cottage'),
     activitiesCtrl  = require('./app/controllers/activities'),
     eventsCtrl  = require('./app/controllers/events'),
-    bookCtrl  = require('./app/controllers/book'),
+    contactCtrl  = require('./app/controllers/contact'),
     loginCtrl = require('./app/controllers/login'),
     adminCtrl = require('./app/controllers/admin');
 
-var models = glob.sync(config.root + '/app/models/*.js');
-models.forEach(function (model) {
-  require(model);
-});
 var app = express();
 
 require('./config/express')(app, config);
@@ -36,7 +37,8 @@ app.get('/chambres-d-hote', bnbCtrl.get);
 app.get('/gite', cottageCtrl.get);
 app.get('/activites', activitiesCtrl.get);
 app.get('/evenements', eventsCtrl.get);
-app.get('/reserver', bookCtrl.get);
+app.get('/reserver', contactCtrl.get);
+app.post('/reserver', contactCtrl.create);
 
 app.get('/admin', auth.private, adminCtrl.get);
 

@@ -2,9 +2,13 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var ContactSchema = new Schema({
-  title: String,
+  name: String,
   email: String,
-  text: String
+  phone: String,
+  guestCount : Number,
+  arrivalDate: Date,
+  departureDate: Date,
+  content: String
 });
 
 mongoose.model('Contact', ContactSchema);
