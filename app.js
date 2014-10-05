@@ -30,12 +30,12 @@ var app = express();
 require('./config/express')(app, config);
 
 require('formage').init(app, express, mongoose.models, {
-    title: 'Admin',
+    title: 'Backoffice',
     root: '/backoffice',
-    default_section: 'main',
+    default_section: 'Gestion du site',
     username: 'admin',
     password: 'admin',
-    admin_users_gui: true
+    admin_users_gui: false
 });
 
 
