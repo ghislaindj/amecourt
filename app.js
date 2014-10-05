@@ -29,6 +29,16 @@ var app = express();
 
 require('./config/express')(app, config);
 
+require('formage').init(app, express, mongoose.models, {
+    title: 'Admin',
+    root: '/backoffice',
+    default_section: 'main',
+    username: 'admin',
+    password: 'admin',
+    admin_users_gui: true
+});
+
+
 // Router
 app.get('/', homeCtrl.get);
 
