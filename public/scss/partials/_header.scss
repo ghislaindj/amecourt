@@ -33,11 +33,10 @@ header{
 
                     a{
                         background: url("../img/logo.png") 50% 50% no-repeat;
-                        background-size: 30px 30px;
+                        background-size: 40px 40px;
                         width: 40px;
                         height: 40px;
-                        opacity: 0.15;
-                        border-right: solid rgba(0, 0, 0, 0.5) 1px;
+                        border-right: solid $grey-6 1px;
                     }
                 }
 
