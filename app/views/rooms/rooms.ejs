@@ -5,10 +5,15 @@
         <%- include ../partials/head.ejs %>
     </head>
     <body>
-        <%- include ../partials/header.ejs %>
-        <div id="container">
+        <header>
+            <a href="/">
+                <section class="main-top">
+                    <img src="/img/main.png" alt="">
+                </section>
+            </a>
+        </header>
 
-            <p>Chambres d'hôte</p>
+        <div id="container" style="padding-top: 155px;">
 
             <% if (room == 1) { %>
             <%- include ./room1.ejs %>
@@ -17,7 +22,6 @@
             <% } %>
 
             <%- include ../partials/footer.ejs %>
-
         </div>
     </body>
 </html>
