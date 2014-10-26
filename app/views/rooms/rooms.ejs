@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>Château d'Amécourt</title>
+        <%- include ../partials/head.ejs %>
+    </head>
+    <body>
+        <%- include ../partials/header.ejs %>
+        <div id="container">
+
+            <p>Chambres d'hôte</p>
+
+            <% if (room == 1) { %>
+            <%- include ./room1.ejs %>
+            <% } else if (room == 2) { %>
+            <%- include ./room2.ejs %>
+            <% } %>
+
+            <%- include ../partials/footer.ejs %>
+
+        </div>
+    </body>
+</html>

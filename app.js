@@ -17,7 +17,7 @@ models.forEach(function (model) {
 
 var homeCtrl  = require('./app/controllers/home'),
     castleCtrl  = require('./app/controllers/castle'),
-    bnbCtrl  = require('./app/controllers/bnb'),
+    roomsCtrl  = require('./app/controllers/rooms'),
     cottageCtrl  = require('./app/controllers/cottage'),
     activitiesCtrl  = require('./app/controllers/activities'),
     eventsCtrl  = require('./app/controllers/events'),
@@ -43,7 +43,7 @@ require('formage').init(app, express, mongoose.models, {
 app.get('/', homeCtrl.get);
 
 app.get('/chateau', castleCtrl.get);
-app.get('/chambres-d-hote', bnbCtrl.get);
+app.get('/chambres-d-hote/:room', roomsCtrl.get);
 app.get('/gite', cottageCtrl.get);
 app.get('/activites', activitiesCtrl.get);
 app.get('/evenements', eventsCtrl.get);

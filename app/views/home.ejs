@@ -4,18 +4,32 @@
         <title>Château d'Amécourt</title>
         <%- include partials/head.ejs %>
     </head>
+    <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/js/map.js"></script>
+    <script type="text/javascript" src="/js/scroll.js"></script>
 
     <body>
         <%- include partials/header.ejs %>
+
         <div id="container">
             <section id="home">
+
+                <!--
+<section class="main-top">
+<img src="/img/main.png" alt="">
+<div class="menu">
+<a href="#sect-castle">le chateau</span>
+<a href="#sect-events">Les réceptions</span>
+<a href="#sect-rooms">le gîte et les chambres d'hotes</span>
+</div>
+</section>
+-->
 
                 <section class="carousel">
                     <div class="main-title">
                         <div id="mainprev" class="prev"></div>
                         <div id="mainnext" class="next"></div>
-                        <div class="txt">Chateau d'Amécourt</div>
+                        <!--                        <div class="txt">Chateau d'Amécourt</div>-->
 
                         <div class="img img-1 current"></div>
                         <div class="img img-2 right"></div>
@@ -78,7 +92,57 @@
 
                 </script>
 
-                <section class="intro-1">
+                <section id="sect-castle" class="intro-3">
+                    <div class="txt">
+                        <div>Un lieu d'exception pour vos réceptions</div>
+                        Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
+                    </div>
+
+                    <div class="block" style="height: 60vw;">
+                        <div class="spacer">
+                            <div class="event event-1"></div>
+                        </div>
+                    </div><div class="block">
+                    <div class="subspacer">
+                        <div class="spacer">
+
+
+                        </div>
+                    </div>
+                    <div class="subspacer">
+                        <div class="spacer">
+                            <div class="event event-2"></div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+               <section id="sect-events" class="intro-2">
+                    <div class="txt">
+                        <div>Un lieu d'exception pour vos réceptions</div>
+                        Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
+                    </div>
+
+                    <div class="block" style="height: 60vw;">
+                        <div class="spacer">
+                            <div class="event event-1"></div>
+                        </div>
+                    </div><div class="block">
+                    <div class="subspacer">
+                        <div class="spacer">
+
+
+                        </div>
+                    </div>
+                    <div class="subspacer">
+                        <div class="spacer">
+                            <div class="event event-2"></div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                
+                <section id="sect-rooms" class="intro-1">
                     <div class="txt">
                         <div>Un séjour au coeur de la nature</div>
                         A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
@@ -130,31 +194,6 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
 
                     <!--                    <div class="btn">Voir toutes les chambres</div>-->
 
-                </section>
-
-                <section class="intro-2">
-                    <div class="txt">
-                        <div>Un lieu d'exception pour vos réceptions</div>
-                        Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
-                    </div>
-
-                    <div class="block" style="height: 60vw;">
-                        <div class="spacer">
-                            <div class="event event-1"></div>
-                        </div>
-                    </div><div class="block">
-                    <div class="subspacer">
-                        <div class="spacer">
-
-
-                        </div>
-                    </div>
-                    <div class="subspacer">
-                        <div class="spacer">
-                            <div class="event event-2"></div>
-                        </div>
-                    </div>
-                    </div>
                 </section>
 
                 <section class="map">
