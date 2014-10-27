@@ -2,7 +2,7 @@
     display: inline-block;
     width: 30px; height: 30px;
     background: url(/img/sprite.png) no-repeat;
-    background-size: 120px 50px;
+    background-size: 280px 50px;
 
     &.key{background-position: 0 0;}
     &.people{background-position: -30px 0;}
@@ -13,11 +13,19 @@
     display: inline-block;
     width: 20px; height: 20px;
     background: url(/img/sprite.png) no-repeat;
-    background-size: 120px 50px;
+    background-size: 280px 50px;
 
     &.wifi{background-position: 0 -30px;}
     &.shower{background-position: -20px -30px;}
     &.food{background-position: -40px -30px;}
     &.toilet{background-position: -60px -30px;}
     &.tv{background-position: -80px -30px;}
+    &.washing{background-position: -100px -30px;}
+    &.dryer{background-position: -120px -30px;}
+    &.parking{background-position: -140px -30px;}
+    &.garden{background-position: -160px -30px;}
+    &.cup{background-position: -180px -30px;}
+    &.swimmer{background-position: -200px -30px;}
+    &.dog{background-position: -220px -30px;}
+    &.guy{background-position: -240px -30px; width: 12px;}
 }

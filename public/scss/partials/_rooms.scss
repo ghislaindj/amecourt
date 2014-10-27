@@ -1,13 +1,102 @@
 #room{
+
     article{
+        padding-bottom: 20px;
+        border-bottom: solid $grey-4 3px;
         background-color: $grey-0;
+        &>div{padding: 10px;}
 
         .summary{
-            padding: 20px 0;
+            padding: 20px 10px;
+            border-bottom: solid $grey-4 1px;
             span{
                 display: inline-block;
-                width: 20%;
+                vertical-align: top;
+                width: 25%;
                 text-align: center;
+            }
+        }
+
+        .img-block.room1{
+            .img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                &.img-1{
+                    background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+
+                &.img-2{
+                    background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+
+                &.img-3{
+                    background: url("../img/room-1-3.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+            }
+        }
+
+        .img-block.room2{
+            .img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                &.img-1{
+                    background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+
+                &.img-2{
+                    background: url("../img/room-2-2.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+
+                &.img-3{
+                    background: url("../img/room-2-3.jpg") 50% 50% no-repeat;
+                    background-size: auto 100%;
+                }
+            }
+        }
+
+        table{
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+
+            td{
+                vertical-align: top;
+                padding: 20px 0;
+
+                &:first-child{
+                    width: 130px;
+                    text-align: right;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                &:last-child{
+                    padding-right: 20px;
+                }
+
+                span{
+                    display: inline-block;
+                    vertical-align: top;
+                    line-height: 22px;
+                    padding-bottom: 4px;
+                }
+            }
+
+            tr:not(:last-child){
+                td{border-bottom: solid $grey-4 1px;}
             }
         }
     }

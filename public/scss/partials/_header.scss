@@ -128,3 +128,34 @@ header{
         }
     }
 }
+
+.pg-title{
+    padding: 20px;
+
+    .main { 
+        vertical-align: top;
+        border-right: solid 1px white;
+        line-height: 50px;
+        padding-right: 40px;
+        margin-right: 40px;
+        font-size: 40px;
+
+        a {
+            letter-spacing: -2px;
+
+            color: white;
+
+            vertical-align: middle;
+
+        }
+    }
+
+    .sub{
+        vertical-align: top;
+        font-size: 16px;
+        color: white;
+        line-height: 50px;
+    }
+
+    span:last-child{border-right: none;}
+}
