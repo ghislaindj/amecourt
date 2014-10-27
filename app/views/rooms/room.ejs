@@ -13,12 +13,14 @@
                     </section>
                 </a>
             </header>
-            
-            <% if (room == 1) { %>
-            <%- include ./room1.ejs %>
-            <% } else if (room == 2) { %>
-            <%- include ./room2.ejs %>
-            <% } %>
+
+            <div id="room">
+                <% if (room == 1) { %>
+                <%- include ./room1.ejs %>
+                <% } else if (room == 2) { %>
+                <%- include ./room2.ejs %>
+                <% } %>
+            </div>
 
             <%- include ../partials/footer.ejs %>
         </div>

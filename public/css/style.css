@@ -110,6 +110,56 @@ header .content {
   background-attachment: fixed;
 }
 
+.icons {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(/img/sprite.png) no-repeat;
+  -webkit-background-size: 120px 50px;
+  background-size: 120px 50px;
+}
+
+.icons.key {
+  background-position: 0 0;
+}
+
+.icons.people {
+  background-position: -30px 0;
+}
+
+.icons.bed {
+  background-position: -60px 0;
+}
+
+.mini-icons {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/img/sprite.png) no-repeat;
+  -webkit-background-size: 120px 50px;
+  background-size: 120px 50px;
+}
+
+.mini-icons.wifi {
+  background-position: 0 -30px;
+}
+
+.mini-icons.shower {
+  background-position: -20px -30px;
+}
+
+.mini-icons.food {
+  background-position: -40px -30px;
+}
+
+.mini-icons.toilet {
+  background-position: -60px -30px;
+}
+
+.mini-icons.tv {
+  background-position: -80px -30px;
+}
+
 .btn {
   height: 40px;
   padding: 0 12px;
@@ -986,4 +1036,32 @@ footer .col a:not(:last-child) {
   #home .map {
     height: 630px;
   }
+}
+
+#room article {
+  background-color: #fcfcfc;
+}
+
+#room article .summary {
+  padding: 20px 0;
+}
+
+#room article .summary span {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+#room article {
+  background-color: #fcfcfc;
+}
+
+#room article .summary {
+  padding: 20px 0;
+}
+
+#room article .summary span {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
 }
