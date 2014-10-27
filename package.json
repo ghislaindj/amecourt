@@ -29,5 +29,8 @@
     "time-grunt": "~0.3.2",
     "load-grunt-tasks": "~0.6.0",
     "grunt-contrib-sass": "~0.8.1"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
