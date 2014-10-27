@@ -90,4 +90,41 @@ header{
             display: block;
         }
     }
+
+    .main-top{
+        text-align: center;
+        background-color: white;
+
+        img{
+            margin: 40px 0;
+            height: 70px;
+            width: 260px;
+        }
+
+    }
+
+    .menu{
+        border-top: solid $grey-4 1px;
+        height: 70px;
+        text-align: center;
+        background-color: white;
+
+        a{
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 17px;
+            height: 69px;
+            text-decoration: none;
+            color: #555555;
+            line-height: 70px;
+            font-size: 22px;
+            font-weight: 200;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #5f3110;
+                color: white;
+            }
+        }
+    }
 }

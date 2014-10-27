@@ -18,8 +18,6 @@ models.forEach(function (model) {
 var homeCtrl  = require('./app/controllers/home'),
     castleCtrl  = require('./app/controllers/castle'),
     roomsCtrl  = require('./app/controllers/rooms'),
-    cottageCtrl  = require('./app/controllers/cottage'),
-    activitiesCtrl  = require('./app/controllers/activities'),
     eventsCtrl  = require('./app/controllers/events'),
     contactCtrl  = require('./app/controllers/contact'),
     loginCtrl = require('./app/controllers/login'),
@@ -42,13 +40,17 @@ require('formage').init(app, express, mongoose.models, {
 // Router
 app.get('/', homeCtrl.get);
 
-app.get('/chateau', castleCtrl.get);
-app.get('/chambres-d-hote/:room', roomsCtrl.get);
-app.get('/gite', cottageCtrl.get);
-app.get('/activites', activitiesCtrl.get);
-app.get('/evenements', eventsCtrl.get);
-app.get('/reserver', contactCtrl.get);
-app.post('/reserver', contactCtrl.create);
+app.get('/castle/history', castleCtrl.getHistory);
+app.get('/castle/site', castleCtrl.getSite);
+app.get('/castle/activities', castleCtrl.getActivities);
+
+app.get('/rooms', roomsCtrl.getRooms);
+app.get('/room/:room', roomsCtrl.getRoom);
+app.get('/cottage', roomsCtrl.getCottage);
+
+app.get('/events', eventsCtrl.get);
+app.get('/book', contactCtrl.get);
+app.post('/book', contactCtrl.create);
 
 app.get('/admin', auth.private, adminCtrl.get);
 

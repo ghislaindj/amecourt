@@ -14,10 +14,7 @@ a {
 }
 
 body {
-  background: url("../img/main-img-1-b.jpg") 50% 40% no-repeat;
-  -webkit-background-size: 100% auto;
-  background-size: 100% auto;
-  background-attachment: fixed;
+  background-color: #fcfcfc;
 }
 
 .noty {
@@ -107,6 +104,10 @@ header .content {
   padding: 40px 0 64px 0;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  background: url("../img/main-img-1-b.jpg") 50% 40% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-attachment: fixed;
 }
 
 .btn {
@@ -293,6 +294,42 @@ header nav.oppened ul {
   display: block;
 }
 
+header .main-top {
+  text-align: center;
+  background-color: white;
+}
+
+header .main-top img {
+  margin: 40px 0;
+  height: 70px;
+  width: 260px;
+}
+
+header .menu {
+  border-top: solid #dddddd 1px;
+  height: 70px;
+  text-align: center;
+  background-color: white;
+}
+
+header .menu a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 17px;
+  height: 69px;
+  text-decoration: none;
+  color: #555555;
+  line-height: 70px;
+  font-size: 22px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+header .menu a:hover {
+  background-color: #5f3110;
+  color: white;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -379,40 +416,6 @@ footer .col a:not(:last-child) {
   footer .col a:not(:last-child) {
     padding-right: 4px;
   }
-}
-
-.main-top {
-  text-align: center;
-  background-color: white;
-}
-
-.main-top img {
-  margin: 40px 0;
-  height: 70px;
-  width: 260px;
-}
-
-.main-top .menu {
-  border-top: solid #dddddd 1px;
-  height: 70px;
-}
-
-.main-top .menu a {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 17px;
-  height: 70px;
-  text-decoration: none;
-  color: #555555;
-  line-height: 70px;
-  font-size: 20px;
-  font-weight: 100;
-  cursor: pointer;
-}
-
-.main-top .menu a:hover {
-  background-color: #5f3110;
-  color: white;
 }
 
 .pg-title {
@@ -680,6 +683,12 @@ footer .col a:not(:last-child) {
   background-size: 100% auto;
 }
 
+#home .intro-1 .block .spacer .room.room-4 {
+  background: url("../img/main-room-4.jpg") 50% 50% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
 #home .intro-1 .block .spacer .cover {
   position: absolute;
   top: 0;
@@ -759,7 +768,7 @@ footer .col a:not(:last-child) {
 
 #home .intro-2 .block .subspacer {
   position: relative;
-  height: 30vw;
+  height: 22vw;
 }
 
 #home .intro-2 .block .spacer {
@@ -842,11 +851,129 @@ footer .col a:not(:last-child) {
   text-align: center;
 }
 
+#home .intro-3 .block {
+  display: inline-block;
+  vertical-align: top;
+  height: 27vw;
+  width: 33.333%;
+  position: relative;
+}
+
+@media (max-width: 980px) {
+  #home .intro-3 .block {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #home .intro-3 .block {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .intro-3 .block {
+    height: 460px;
+  }
+}
+
+#home .intro-3 .block .spacer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  line-height: 27vw;
+  border: solid #c7cad0 1px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f2f3f4;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 980px) {
+  #home .intro-3 .block .spacer {
+    line-height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #home .intro-3 .block .spacer {
+    line-height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .intro-3 .block .spacer {
+    line-height: 460px;
+  }
+}
+
+#home .intro-3 .block .spacer:hover .cover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#home .intro-3 .block .spacer .room {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#home .intro-3 .block .spacer .room.room-1 {
+  background: url("../img/main-castle-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+#home .intro-3 .block .spacer .room.room-2 {
+  background: url("../img/main-castle-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+#home .intro-3 .block .spacer .room.room-3 {
+  background: url("../img/main-castle-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+#home .intro-3 .block .spacer .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+#home .intro-3 .block .spacer .title {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.6);
+}
+
+#home .intro-3 .block .spacer .title .price {
+  font-size: 20px;
+  color: white;
+}
+
 #home .map {
   position: relative;
   width: 100%;
   height: 42vw;
-  border-bottom: solid #cfd1df 4px;
+  border-bottom: solid #cfd1df 6px;
 }
 
 @media (max-width: 320px) {

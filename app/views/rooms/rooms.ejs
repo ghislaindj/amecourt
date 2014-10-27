@@ -5,21 +5,19 @@
         <%- include ../partials/head.ejs %>
     </head>
     <body>
-        <header>
-            <a href="/">
-                <section class="main-top">
-                    <img src="/img/main.png" alt="">
-                </section>
-            </a>
-        </header>
-
         <div id="container" style="padding-top: 155px;">
+            <header>
+                <a href="/">
+                    <section class="main-top">
+                        <img src="/img/main.png" alt="">
+                    </section>
+                </a>
+            </header>
 
-            <% if (room == 1) { %>
-            <%- include ./room1.ejs %>
-            <% } else if (room == 2) { %>
-            <%- include ./room2.ejs %>
-            <% } %>
+            <div class="pg-title">
+                <span class="main">Les chambres</span>
+            </div>
+
 
             <%- include ../partials/footer.ejs %>
         </div>
