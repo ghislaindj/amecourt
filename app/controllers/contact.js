@@ -10,23 +10,23 @@ module.exports = {
         var contact = new Contact(req.body);
 
         contact.save(function(err, contact){
-            // if(req.accepts('js')) {
-            //     if(err) {
-            //         return res.json(500, {
-            //             message: 'Error',
-            //             error: err
-            //         });
-            //     }
-            //     return res.json({
-            //         message: 'Contact has been saved',
-            //         contact: contact
-            //     });
-            // } else {
+            if(req.accepts('js')) {
+                if(err) {
+                    return res.json(500, {
+                        message: 'Il y a eu un problème, retentez !',
+                        error: err
+                    });
+                }
+                return res.json({
+                    message: 'Booking has been saved',
+                    contact: contact
+                });
+            } else {
                 if(err) {
                     return res.send('500: Internal Server Error', 500);
                 }
                 return res.render('contact', {contact: contact});
-            //}
+            }
         });
     }
 }

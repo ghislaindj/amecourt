@@ -8,7 +8,8 @@ var ContactSchema = new Schema({
   phone: String,
   guestCount : Number,
   arrivalDate: Date,
-  departureDate: Date,
+  departureDate: String,
+  room: Date,
   content: String
 });
 

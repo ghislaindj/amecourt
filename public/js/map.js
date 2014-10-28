@@ -2,7 +2,7 @@
 function initialize(){
     //    var pos = 2.3576 + (document.getElementById('container').clientWidth / 140000)
     mapOptions={
-        zoom:15,
+        zoom:8,
         //        center:new google.maps.LatLng(48.8724, pos),
         center:new google.maps.LatLng(49.379931, 1.734293),
         //        disableDefaultUI:true,
@@ -48,6 +48,11 @@ function initialize(){
         {
             elementType:"labels.icon",
             stylers:[{visibility:"off"}]
+        },
+        {
+            featureType: "administrative",
+            elementType: "labels",
+            stylers:[{visibility:"on"}]
         }
     ];
 

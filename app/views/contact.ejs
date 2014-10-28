@@ -1,19 +1,28 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <title>Château d'Amécourt</title>
+        <title>Réserver</title>
         <%- include partials/head.ejs %>
     </head>
     <body>
-        <%- include partials/header.ejs %>
-        <div id="container">
+        <div id="container" style="padding-top: 155px;">
+            <header>
+                <a href="/">
+                    <section class="main-top">
+                        <img src="/img/main.png" alt="">
+                    </section>
+                </a>
+            </header>
 
-            <p>Réserver</p>
+            <div class="pg-title">
+                <span class="main">Le Chateau</span>
+                <span class="sub">Le lieu</span>
+            </div>
 
             <%- include partials/form.ejs %>
 
-            <%- include partials/footer.ejs %>
 
+            <%- include partials/footer.ejs %>
         </div>
     </body>
 </html>
