@@ -28,8 +28,8 @@
                 width: 66px;
                 height: 100%;
                 top: 0;
-                background: url("../img/prev.png") 50% 50% no-repeat;
-                background-size: 50%;
+                background: url("../img/prev.png") 0% 50% no-repeat;
+                background-size: 100%;
                 cursor: pointer;
                 z-index: 1;
             }
@@ -40,7 +40,7 @@
                 height: 100%;
                 top: 0; right: 0;
                 background: url("../img/next.png") 50% 50% no-repeat;
-                background-size: 50%;
+                background-size: 100%;
                 cursor: pointer;
                 z-index: 1;
             }
