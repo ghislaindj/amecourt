@@ -8,7 +8,8 @@ module.exports = {
 
     create: function(req, res) {
         var contact = new Contact(req.body);
-
+        console.log("new body", req.body);
+        console.log("new contact", contact);
         contact.save(function(err, contact){
             if(req.accepts('js')) {
                 if(err) {

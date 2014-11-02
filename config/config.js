@@ -1,5 +1,6 @@
 var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
+    secret = require('./secret.js'),
     env = process.env.NODE_ENV || 'development';
 
 var config = {
@@ -9,8 +10,14 @@ var config = {
       name: 'amecourt'
     },
     port: 3000,
-    db: 'mongodb://localhost/amecourt-development'
-
+    db: 'mongodb://localhost/amecourt-development',
+    mailer: {
+      auth: {
+        user: secret.mandrill.user,
+        pass: secret.mandrill.password,
+      },
+      defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>'
+    }
   },
 
   staging: {
@@ -19,18 +26,14 @@ var config = {
       name: 'amecourt'
     },
     port: 3100,
-    db: 'mongodb://localhost/amecourt-staging'
-
-  },
-
-  production: {
-    root: rootPath,
-    app: {
-      name: 'amecourt'
-    },
-    port: 3000,
-    db: 'mongodb://localhost/amecourt-production'
-
+    db: 'mongodb://localhost/amecourt-staging',
+    mailer: {
+     auth: {
+       user: 'test@example.com',
+       pass: 'secret',
+     },
+     defaultFromAddress: 'First Last <test@examle.com>'
+   }
   }
 };
 
