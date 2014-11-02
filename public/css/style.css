@@ -469,6 +469,123 @@ footer {
       #home .carousel .main-title .img.img-5 {
         background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
         background-size: 100% auto; }
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .carousel .main-title {
+    height: 830px;
+  }
+}
+
+#home .carousel .main-title .txt {
+  font-family: "abril-titling-narrow", serif;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  width: 100%;
+  top: 3.5vw;
+  text-align: center;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+  font-size: 4.8vw;
+}
+
+@media (max-width: 589px) {
+  #home .carousel .main-title .txt {
+    font-size: 26px;
+    top: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #home .carousel .main-title .txt {
+    font-size: 80px;
+    top: 50px;
+  }
+}
+
+#home .carousel .main-title .prev {
+  position: absolute;
+  width: 66px;
+  height: 100%;
+  top: 0;
+  background: url("../img/prev.png") 0% 50% no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#home .carousel .main-title .next {
+  position: absolute;
+  width: 66px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url("../img/next.png") 50% 50% no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#home .carousel .main-title .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+#home .carousel .main-title .img.left {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+#home .carousel .main-title .img.right {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+#home .carousel .main-title .img.unanimated {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+#home .carousel .main-title .img.img-1 {
+  background: url("../img/main-img-1.jpg") 50% 40% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .carousel .main-title .img.img-2 {
+  background: url("../img/main-img-2.jpg") 50% 30% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .carousel .main-title .img.img-3 {
+  background: url("../img/main-img-3.jpg") 50% 80% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .carousel .main-title .img.img-4 {
+  background: url("../img/main-img-4.jpg") 50% 90% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+#home .carousel .main-title .img.img-5 {
+  background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+>>>>>>> 89014b38f481833df89f09a5eeca07bae9e6372c
 #home .intro-1 {
   position: relative;
   width: 100%;
