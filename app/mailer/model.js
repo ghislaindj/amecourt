@@ -6,6 +6,8 @@ var config = require('../../config/config'),
     templatesDir   = path.resolve(__dirname, '..', 'mailer/templates'),
     emailTemplates = require('email-templates');
 
+console.log(config.mailer.auth);
+
 var EmailAddressRequiredError = new Error('email address required');
 
 var transporter = nodemailer.createTransport({
