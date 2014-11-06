@@ -16,7 +16,8 @@ var config = {
         user: secret.mandrill.user,
         pass: secret.mandrill.password,
       },
-      defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>'
+      defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>',
+      defaultToAddress: 'gdjuvigny@gmail.com'
     }
   },
 
@@ -28,12 +29,13 @@ var config = {
     port: 3100,
     db: 'mongodb://localhost/amecourt-staging',
     mailer: {
-     auth: {
-       user: 'test@example.com',
-       pass: 'secret',
-     },
-     defaultFromAddress: 'First Last <test@examle.com>'
-   }
+      auth: {
+        user: secret.mandrill.user,
+        pass: secret.mandrill.password,
+      },
+      defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>',
+      defaultToAddress: 'gdjuvigny@gmail.com'
+    }
   }
 };
 
