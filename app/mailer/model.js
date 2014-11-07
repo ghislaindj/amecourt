@@ -19,7 +19,7 @@ var transporter = nodemailer.createTransport({
 var sendBookingNotification = function(contact, fn) {
   console.log("sendBookingNotification", contact);
   var locals = {
-    toEmail: 'gdjuvigny@gmail.com',
+    toEmail: config.mailer.defaultToAddress,
     fromEmail: contact.email.length > 0  ? contact.email : config.mailer.defaultFromAddress,
     subject: 'Une nouvelle demande de réservation',
     contact: contact
