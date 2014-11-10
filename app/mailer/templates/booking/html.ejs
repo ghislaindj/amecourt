@@ -11,8 +11,8 @@
                 <li><b>Téléphone :</b><%- contact.phone %></li>
                 <li><b>Chambre :</b><%- contact.room %></li>
                 <li><b>Nombre de personnes :</b><%- contact.guestCount %></li>
-                <li><b>Date d'arrivée :</b><%- contact.arrivalDate %></li>
-                <li><b>Date de départ :</b><%- contact.departureDate %></li>
+                <li><b>Date d'arrivée :</b><%= helpers.dateToDDMMYYYY(contact.arrivalDate) %></li>
+                <li><b>Date de départ :</b><%= helpers.dateToDDMMYYYY(contact.departureDate) %></li>
                 <li><b>Précisions :</b><%- contact.content %></li>
             </ul>
         </p>
