@@ -949,8 +949,8 @@ footer .col a:not(:last-child) {
 
 #home .intro-2 .img-block .img.img-1 {
   background: url("../img/main-event-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 #home .intro-2 .img-block .img.img-2 {
@@ -1206,8 +1206,8 @@ footer .col a:not(:last-child) {
 
 .img-block.room1 .img.img-2 {
   background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room1 .img.img-3 {
@@ -1252,14 +1252,14 @@ footer .col a:not(:last-child) {
 
 .img-block.room3 .img.img-1 {
   background: url("../img/room-3-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room3 .img.img-2 {
   background: url("../img/room-3-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room3 .img.img-3 {
@@ -1468,8 +1468,8 @@ footer .col a:not(:last-child) {
 
 .img-block.room1 .img.img-2 {
   background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room1 .img.img-3 {
@@ -1514,14 +1514,14 @@ footer .col a:not(:last-child) {
 
 .img-block.room3 .img.img-1 {
   background: url("../img/room-3-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room3 .img.img-2 {
   background: url("../img/room-3-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 .img-block.room3 .img.img-3 {
