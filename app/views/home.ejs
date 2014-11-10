@@ -26,18 +26,6 @@
             </header>
 
             <section id="home">
-
-                <!--
-<section class="main-top">
-<img src="/img/main.png" alt="">
-<div class="menu">
-<a href="#sect-castle">le chateau</span>
-<a href="#sect-events">Les réceptions</span>
-<a href="#sect-rooms">le gîte et les chambres d'hotes</span>
-</div>
-</section>
--->
-
                 <section class="carousel">
                     <div class="main-title">
                         <div id="mainprev" class="prev"></div>
@@ -145,23 +133,32 @@
                         Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
                     </div>
 
-                    <div class="block" style="height: 44vw;">
-                        <div class="spacer">
-                            <div class="event event-1"></div>
+                    <div class="img-block">
+                        <div class="block">
+                            <a class="spacer" href="/events">
+                                <div class="img img-1">
+                                    <div class="cover">
+                                        <div class="title">Les mariages</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/events">
+                            <div class="img img-2">
+                                <div class="cover">
+                                    <div class="title">Les séminaires</div>
+                                </div>
+                            </div>
+                        </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/events">
+                            <div class="img img-3">
+                                <div class="cover">
+                                    <div class="title">Nos équipements et partenaires</div>
+                                </div>
+                            </div>
+                        </a>
                         </div>
-                    </div><div class="block">
-                    <div class="subspacer">
-                        <div class="spacer">
-
-
-
-                        </div>
-                    </div>
-                    <div class="subspacer">
-                        <div class="spacer">
-                            <div class="event event-2"></div>
-                        </div>
-                    </div>
                     </div>
                 </section>
 
@@ -170,17 +167,6 @@
                         <div>Un séjour au coeur de la nature</div>
                         A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
                     </div>
-
-                    <!--
-<div class="block">
-<div class="spacer">
-<div class="txt">
-<div>Un séjour au coeur de la nature</div>
-A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
-</div>
-</div>
-</div>
--->
                     <div class="block">
                         <a class="spacer" href="/room/1">
                             <div class="room room-1">
@@ -198,10 +184,10 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
                         </div>
                     </a>
                     </div><div class="block">
-                    <a class="spacer" href="/cottage">
+                    <a class="spacer" href="/room/4">
                         <div class="room room-3">
                             <div class="cover">
-                                <div class="title">Le gîte rural<br/><div class="price">5 pers. | 350€/semaine</div></div>
+                                <div class="title">Le gîte rural<br/><div class="price">6 pers. | 350€/semaine</div></div>
                             </div>
                         </div>
                     </a>
@@ -214,9 +200,6 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
                         </div>
                     </a>
                     </div>
-
-                    <!--                    <div class="btn">Voir toutes les chambres</div>-->
-
                 </section>
 
                 <section class="map">
@@ -226,8 +209,6 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
             </section>
             <%- include partials/footer.ejs %>
         </div>
-
-
 
     </body>
 </html>

@@ -14,8 +14,23 @@
                 </a>
             </header>
 
-            <div class="pg-title">
-                <span class="main"><a href="/rooms">Les chambres</a></span>
+            <div id="rooms">
+                <div class="pg-title">
+                    <span class="main"><a href="/rooms">Les chambres</a></span>
+                </div>
+
+                <article>
+                    <% for(var i=0; i<rooms.length; i++) { %><div class="block">
+                    <a class="spacer img-block room<%= rooms[i].id %>" href="/room/<%= rooms[i].id %>">
+                        <div class="img img-1">
+                            <div class="cover">
+                                <div class="title"><%= rooms[i].name %><br/><div class="price"><%= rooms[i].guestsCount %> pers. | <%= rooms[i].avgPrice %></div></div>
+                            </div>
+                        </div>
+                    </a>
+                    </div><% } %>
+
+                </article>
             </div>
 
 

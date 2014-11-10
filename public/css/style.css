@@ -118,8 +118,8 @@ header .content {
   width: 30px;
   height: 30px;
   background: url(/img/sprite.png) no-repeat;
-  -webkit-background-size: 280px 50px;
-  background-size: 280px 50px;
+  -webkit-background-size: 380px 50px;
+  background-size: 380px 50px;
 }
 
 .icons.key {
@@ -139,8 +139,8 @@ header .content {
   width: 20px;
   height: 20px;
   background: url(/img/sprite.png) no-repeat;
-  -webkit-background-size: 280px 50px;
-  background-size: 280px 50px;
+  -webkit-background-size: 380px 50px;
+  background-size: 380px 50px;
 }
 
 .mini-icons.wifi {
@@ -194,6 +194,26 @@ header .content {
 .mini-icons.guy {
   background-position: -240px -30px;
   width: 12px;
+}
+
+.mini-icons.microwave {
+  background-position: -260px -30px;
+}
+
+.mini-icons.dvd {
+  background-position: -280px -30px;
+}
+
+.mini-icons.towel {
+  background-position: -300px -30px;
+}
+
+.mini-icons.broom {
+  background-position: -320px -30px;
+}
+
+.mini-icons.campfire {
+  background-position: -340px -30px;
 }
 
 .img-block .block {
@@ -911,12 +931,6 @@ footer .col a:not(:last-child) {
   padding: 10px 10px 20px 10px;
 }
 
-#home .intro-2 .btn {
-  margin: 6px 9px 10px 9px;
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-}
-
 #home .intro-2 .txt {
   margin: 30px 0;
   padding: 0 20px;
@@ -925,81 +939,7 @@ footer .col a:not(:last-child) {
   text-align: center;
 }
 
-#home .intro-2 .block {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  position: relative;
-}
-
-@media (max-width: 980px) {
-  #home .intro-2 .block {
-    width: 100%;
-    height: 40vw;
-  }
-}
-
-@media (max-width: 589px) {
-  #home .intro-2 .block {
-    height: 220px;
-  }
-}
-
-@media (min-width: 1600px) {
-  #home .intro-2 .block {
-    height: 460px;
-  }
-}
-
-#home .intro-2 .block .subspacer {
-  position: relative;
-  height: 22vw;
-}
-
-#home .intro-2 .block .spacer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
-  line-height: 30vw;
-  border: solid #c7cad0 1px;
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: #f2f3f4;
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 980px) {
-  #home .intro-2 .block .spacer {
-    line-height: 40vw;
-  }
-}
-
-@media (max-width: 589px) {
-  #home .intro-2 .block .spacer {
-    line-height: 220px;
-  }
-}
-
-@media (min-width: 1600px) {
-  #home .intro-2 .block .spacer {
-    line-height: 460px;
-  }
-}
-
-#home .intro-2 .block .spacer .txt {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0 20px;
-  font-weight: 200;
-  font-size: 22px;
-  line-height: 28px;
-  text-align: center;
-}
-
-#home .intro-2 .block .spacer .event {
+#home .intro-2 .img-block .img {
   position: absolute;
   top: 0;
   right: 0;
@@ -1007,16 +947,22 @@ footer .col a:not(:last-child) {
   left: 0;
 }
 
-#home .intro-2 .block .spacer .event.event-1 {
+#home .intro-2 .img-block .img.img-1 {
   background: url("../img/main-event-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: 105% auto;
-  background-size: 105% auto;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
 }
 
-#home .intro-2 .block .spacer .event.event-2 {
+#home .intro-2 .img-block .img.img-2 {
   background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: 160% auto;
-  background-size: 160% auto;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+#home .intro-2 .img-block .img.img-3 {
+  background: url("../img/main-event-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
 }
 
 #home .intro-3 {
@@ -1108,58 +1054,6 @@ footer .col a:not(:last-child) {
   text-align: center;
 }
 
-#room article .img-block.room1 .img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#room article .img-block.room1 .img.img-1 {
-  background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room1 .img.img-2 {
-  background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room1 .img.img-3 {
-  background: url("../img/room-1-3.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#room article .img-block.room2 .img.img-1 {
-  background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img.img-2 {
-  background: url("../img/room-2-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img.img-3 {
-  background: url("../img/room-2-3.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
 #room article table {
   width: 100%;
   table-layout: fixed;
@@ -1191,6 +1085,213 @@ footer .col a:not(:last-child) {
 
 #room article table tr:not(:last-child) td {
   border-bottom: solid #dddddd 1px;
+}
+
+#rooms article {
+  padding: 40px 10px 40px 10px;
+  border-bottom: solid #dddddd 3px;
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+#rooms article > div {
+  padding: 10px;
+}
+
+#rooms .block {
+  display: inline-block;
+  vertical-align: top;
+  height: 27vw;
+  width: 33.33%;
+  position: relative;
+}
+
+@media (max-width: 980px) {
+  #rooms .block {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #rooms .block {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #rooms .block {
+    height: 460px;
+  }
+}
+
+#rooms .block .spacer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  line-height: 27vw;
+  border: solid #c7cad0 1px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f2f3f4;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 980px) {
+  #rooms .block .spacer {
+    line-height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #rooms .block .spacer {
+    line-height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #rooms .block .spacer {
+    line-height: 460px;
+  }
+}
+
+#rooms .block .spacer:hover .cover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#rooms .block .spacer .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+#rooms .block .spacer .title {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.6);
+}
+
+#rooms .block .spacer .title .price {
+  font-size: 20px;
+  color: white;
+}
+
+.img-block.room1 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room1 .img.img-1 {
+  background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room1 .img.img-2 {
+  background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room1 .img.img-3 {
+  background: url("../img/room-1-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room2 .img.img-1 {
+  background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img.img-2 {
+  background: url("../img/room-2-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img.img-3 {
+  background: url("../img/room-2-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room3 .img.img-1 {
+  background: url("../img/room-3-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img.img-2 {
+  background: url("../img/room-3-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img.img-3 {
+  background: url("../img/room-3-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room4 .img.img-1 {
+  background: url("../img/room-4-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img.img-2 {
+  background: url("../img/room-4-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img.img-3 {
+  background: url("../img/room-4-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
 }
 
 #room article {
@@ -1215,58 +1316,6 @@ footer .col a:not(:last-child) {
   text-align: center;
 }
 
-#room article .img-block.room1 .img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#room article .img-block.room1 .img.img-1 {
-  background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room1 .img.img-2 {
-  background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room1 .img.img-3 {
-  background: url("../img/room-1-3.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#room article .img-block.room2 .img.img-1 {
-  background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img.img-2 {
-  background: url("../img/room-2-2.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
-#room article .img-block.room2 .img.img-3 {
-  background: url("../img/room-2-3.jpg") 50% 50% no-repeat;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-
 #room article table {
   width: 100%;
   table-layout: fixed;
@@ -1298,4 +1347,211 @@ footer .col a:not(:last-child) {
 
 #room article table tr:not(:last-child) td {
   border-bottom: solid #dddddd 1px;
+}
+
+#rooms article {
+  padding: 40px 10px 40px 10px;
+  border-bottom: solid #dddddd 3px;
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+#rooms article > div {
+  padding: 10px;
+}
+
+#rooms .block {
+  display: inline-block;
+  vertical-align: top;
+  height: 27vw;
+  width: 33.33%;
+  position: relative;
+}
+
+@media (max-width: 980px) {
+  #rooms .block {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #rooms .block {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #rooms .block {
+    height: 460px;
+  }
+}
+
+#rooms .block .spacer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  line-height: 27vw;
+  border: solid #c7cad0 1px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f2f3f4;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 980px) {
+  #rooms .block .spacer {
+    line-height: 40vw;
+  }
+}
+
+@media (max-width: 589px) {
+  #rooms .block .spacer {
+    line-height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #rooms .block .spacer {
+    line-height: 460px;
+  }
+}
+
+#rooms .block .spacer:hover .cover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#rooms .block .spacer .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+#rooms .block .spacer .title {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.6);
+}
+
+#rooms .block .spacer .title .price {
+  font-size: 20px;
+  color: white;
+}
+
+.img-block.room1 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room1 .img.img-1 {
+  background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room1 .img.img-2 {
+  background: url("../img/room-1-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room1 .img.img-3 {
+  background: url("../img/room-1-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room2 .img.img-1 {
+  background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img.img-2 {
+  background: url("../img/room-2-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room2 .img.img-3 {
+  background: url("../img/room-2-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room3 .img.img-1 {
+  background: url("../img/room-3-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img.img-2 {
+  background: url("../img/room-3-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room3 .img.img-3 {
+  background: url("../img/room-3-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-block.room4 .img.img-1 {
+  background: url("../img/room-4-1.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img.img-2 {
+  background: url("../img/room-4-2.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.img-block.room4 .img.img-3 {
+  background: url("../img/room-4-3.jpg") 50% 50% no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
 }

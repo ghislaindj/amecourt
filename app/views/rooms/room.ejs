@@ -15,11 +15,195 @@
             </header>
 
             <div id="room">
-                <% if (room == 1) { %>
-                <%- include ./room1.ejs %>
-                <% } else if (room == 2) { %>
-                <%- include ./room2.ejs %>
-                <% } %>
+                <div class="pg-title">
+                    <span class="main"><a href="/rooms">Les chambres</a></span>
+                    <span class="sub"><%= roomInfos.name %></span>
+                </div>
+
+                <article>
+                    <div class="summary">
+                        <span>
+                            <div class="icons key"></div>
+                            <div class="title"><%= roomInfos.roomsCount %> chambre<% if(roomInfos.roomsCount > 1) { %><%= 's' %><% } %></div>
+                        </span><span>
+                        <div class="icons people"></div>
+                        <div class="title"><%= roomInfos.guestsCount %> personne<% if(roomInfos.guestsCount > 1) { %><%= 's' %><% } %></div>
+                        </span><span>
+                        <div class="icons bed"></div>
+                        <div class="title"><%= roomInfos.beds %></div>
+                        </span><span>
+                        <div class="title"><%= roomInfos.avgPrice %></div>
+                        <% if (!roomInfos.cottage) { %>
+                        <a class="btn book" href="#hidden">Réserver</a>
+                        <% } else { %>
+                        <a class="btn" href="http://www.gites-de-france-eure.com/location-vacances-Gite-Amecourt-27G971.html">Réserver via Gîtes de France</a>
+                        <% } %>
+                        </span>
+                    </div>
+
+
+                    <div class="features">
+                        <div class="img-block room<%= roomInfos.id %>">
+                            <div class="block">
+                                <span class="spacer">
+                                    <div class="img img-1">
+                                    </div>
+                                </span>
+                            </div><div class="block">
+                            <span class="spacer">
+                                <div class="img img-2">
+                                </div>
+                            </span>
+                            </div><div class="block">
+                            <span class="spacer">
+                                <div class="img img-3">
+                                </div>
+                            </span>
+                            </div>
+                        </div>
+
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            Description
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div>
+                                            <%= roomInfos.description %>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div>
+                                            Equipements
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="mini-icons cup"></span>
+                                            <span>Petit déjeuner inclus</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons shower"></span>
+                                            <span>Salle de bain privée</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons wifi"></span>
+                                            <span>Internet sans fil</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons washing"></span>
+                                            <span>Machine à laver</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons dryer"></span>
+                                            <span>Sèche-linge</span>
+                                        </div>
+                                        <% if (roomInfos.cottage) { %>
+                                        <div>
+                                            <span class="mini-icons microwave"></span>
+                                            <span>Four micro-ondes</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons towel"></span>
+                                            <span>Draps fournits</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons broom"></span>
+                                            <span>Forfait ménage à 60€</span>
+                                        </div>
+                                        <% } %>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="mini-icons swimmer"></span>
+                                            <span>Piscine</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons parking"></span>
+                                            <span>Parking gratuit</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons garden"></span>
+                                            <span>Jardin</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons tv"></span>
+                                            <span>Télévision</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons dog"></span>
+                                            <span>Animaux domestiques acceptés</span>
+                                        </div>
+                                        <% if (roomInfos.cottage) { %>
+                                        <div>
+                                            <span class="mini-icons dvd"></span>
+                                            <span>Lecteur DVD</span>
+                                        </div>
+                                        <div>
+                                            <span class="mini-icons campfire"></span>
+                                            <span>Barbecue</span>
+                                        </div>
+                                        <% } %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            Prix
+                                        </div>
+                                    </td>
+                                    <% if (roomInfos.roomPrices) { %>
+                                    <td>
+                                        <% for (var i=0; i<roomInfos.roomPrices.length; i++) { %>
+                                        <div>
+                                            <% for (var j=0; j<=i; j++) { %><span class="mini-icons guy"></span><% } %>
+                                            <span><%= roomInfos.roomPrices[i] %></span>
+                                        </div>
+                                        <% } %>
+                                    </td>
+                                    <% } else { %>
+                                    <td>
+                                        <% for (var i=0; i<roomInfos.cottagePrices.length; i++) { %>
+                                        <div>
+                                            <%= roomInfos.cottagePrices[i].title %> : <%= roomInfos.cottagePrices[i].weekPrice %>
+                                        </div>
+                                        <% } %>
+                                    </td>
+                                    <td>
+                                        <a class="btn" href="http://www.gites-de-france-eure.com/location-vacances-Gite-Amecourt-27G971.html">
+                                            Plus d'information sur le site de Gîte de France
+                                        </a>
+                                    </td>
+                                    <% } %>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="text-align: center;">
+                        <a href="/rooms" class="btn">Voir les autres chambres</a>
+                    </div>
+                </article>
+                <%- include ../partials/form.ejs %>
+
+
+
+
+
+
+
+
+
+
             </div>
 
             <%- include ../partials/footer.ejs %>

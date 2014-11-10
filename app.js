@@ -48,7 +48,6 @@ app.get('/castle/activities', castleCtrl.getActivities);
 
 app.get('/rooms', roomsCtrl.getRooms);
 app.get('/room/:room', roomsCtrl.getRoom);
-app.get('/cottage', roomsCtrl.getCottage);
 
 app.get('/events', eventsCtrl.get);
 app.get('/book', contactCtrl.get);

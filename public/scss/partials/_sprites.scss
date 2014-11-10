@@ -2,7 +2,7 @@
     display: inline-block;
     width: 30px; height: 30px;
     background: url(/img/sprite.png) no-repeat;
-    background-size: 280px 50px;
+    background-size: 380px 50px;
 
     &.key{background-position: 0 0;}
     &.people{background-position: -30px 0;}
@@ -13,7 +13,7 @@
     display: inline-block;
     width: 20px; height: 20px;
     background: url(/img/sprite.png) no-repeat;
-    background-size: 280px 50px;
+    background-size: 380px 50px;
 
     &.wifi{background-position: 0 -30px;}
     &.shower{background-position: -20px -30px;}
@@ -28,4 +28,9 @@
     &.swimmer{background-position: -200px -30px;}
     &.dog{background-position: -220px -30px;}
     &.guy{background-position: -240px -30px; width: 12px;}
+    &.microwave{background-position: -260px -30px;}
+    &.dvd{background-position: -280px -30px;}
+    &.towel{background-position: -300px -30px;}
+    &.broom{background-position: -320px -30px;}
+    &.campfire{background-position: -340px -30px;}
 }
