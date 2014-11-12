@@ -108,6 +108,7 @@ header{
         height: 70px;
         text-align: center;
         background-color: white;
+        @media (max-width: $break-medium){display: none;}
 
         a{
             display: inline-block;
