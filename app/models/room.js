@@ -2,17 +2,22 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     roomsJson = require('../json/rooms.json');
 
+var cottagePrice = {
+    weekPrice : { type: String },
+    title : { type: String }
+};
+
 var RoomSchema = new Schema({
   name: String,
-  price: Number,
   customId: Number,
   cottage: Boolean,
   roomsCount: Number,
+  guestsCount: Number,
   beds: String,
   avgPrice: String,
   description: String,
-  roomPrices: Array,
-  cottagePrices: Array
+  roomPrices: [String],
+  cottagePrices: [cottagePrice]
 });
 
 var room = mongoose.model('Room', RoomSchema);
@@ -35,5 +40,3 @@ function seedRooms() {
         }
     });
 }
-
-exports.module = room;

@@ -11,8 +11,13 @@ db.on('error', function () {
     throw new Error('unable to connect to database at ' + config.db);
 });
 
-var roomModel = require('./app/models/room'),
-    contactModel = require('./app/models/contact');
+// var roomModel = require('./app/models/room'),
+//     contactModel = require('./app/models/contact');
+
+var models = glob.sync(config.root + '/app/models/*.js');
+models.forEach(function (model) {
+  require(model);
+});
 
 
 var homeCtrl  = require('./app/controllers/home'),
@@ -27,14 +32,14 @@ var app = express();
 
 require('./config/express')(app, config);
 
-// require('formage').init(app, express, mongoose.models, {
-//     title: 'Backoffice',
-//     root: '/backoffice',
-//     default_section: 'Gestion du site',
-//     username: 'admin',
-//     password: 'admin',
-//     admin_users_gui: false
-// });
+require('formage').init(app, express, mongoose.models, {
+    title: 'Backoffice',
+    root: '/backoffice',
+    default_section: 'Gestion du site',
+    username: 'admin',
+    password: 'admin',
+    admin_users_gui: false
+});
 
 
 initializer.start(app);
