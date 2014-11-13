@@ -1,30 +1,28 @@
 var validator = require('validator'),
-    roomJson = require('../json/rooms.json');
+    mongoose = require('mongoose'),
+    Room = mongoose.model('Room');
 
 module.exports = {
     getRooms: function(req, res) {
-        res.render('rooms/rooms', {rooms: roomJson.rooms});
+        Room.find({}).exec(function (err, rooms) {
+            res.render('rooms/rooms', {rooms: rooms});
+        });
     },
 
     getRoom: function(req, res) {
-        var id = validator.toString(validator.stripLow(req.params.room));
+        var customId = validator.toString(validator.stripLow(req.params.room));
 
-        var render = function(roomInfos){
-            res.render('rooms/room', {
-                roomInfos: roomInfos
-            });
-        };
-
-        if (id == '1'){
-            render(roomJson.rooms[0]);
-        } else if (id == '2') {
-            render(roomJson.rooms[1]);
-        } else if (id == '3') {
-            render(roomJson.rooms[2]);
-        } else if (id == '4') {
-            render(roomJson.rooms[3]);
-        } else {
-            res.redirect('/');
-        }
+        Room.where({customId: customId}).findOne(function (err, room) {
+            if(err) {
+                console.log("Error", err);
+            }
+            if(room) {
+                res.render('rooms/room', {
+                    roomInfos: room
+                });
+            } else {
+                res.redirect('/');
+            }
+        });
     }
 };

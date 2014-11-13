@@ -34,7 +34,7 @@
                         </span><span>
                         <div class="title"><%= roomInfos.avgPrice %></div>
                         <% if (!roomInfos.cottage) { %>
-                        <a class="btn book" href="#hidden">Réserver</a>
+                        <a class="btn book" data-room=<%= roomInfos.customId %>>Réserver</a>
                         <% } else { %>
                         <a class="btn" href="http://www.gites-de-france-eure.com/location-vacances-Gite-Amecourt-27G971.html">Réserver via Gîtes de France</a>
                         <% } %>
@@ -43,7 +43,7 @@
 
 
                     <div class="features">
-                        <div class="img-block room<%= roomInfos.id %>">
+                        <div class="img-block room<%= roomInfos.customId %>">
                             <div class="block">
                                 <span class="spacer">
                                     <div class="img img-1">

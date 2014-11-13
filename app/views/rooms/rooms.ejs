@@ -21,7 +21,7 @@
 
                 <article>
                     <% for(var i=0; i<rooms.length; i++) { %><div class="block">
-                    <a class="spacer img-block room<%= rooms[i].id %>" href="/room/<%= rooms[i].id %>">
+                    <a class="spacer img-block room<%= rooms[i].customId %>" href="/room/<%= rooms[i].customId %>">
                         <div class="img img-1">
                             <div class="cover">
                                 <div class="title"><%= rooms[i].name %><br/><div class="price"><%= rooms[i].guestsCount %> pers. | <%= rooms[i].avgPrice %></div></div>
