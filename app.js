@@ -10,10 +10,14 @@ db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.db);
 });
 
-var models = glob.sync(config.root + '/app/models/*.js');
-models.forEach(function (model) {
-  require(model);
-});
+// var models = glob.sync(config.root + '/app/models/*.js');
+// models.forEach(function (model) {
+//   require(model);
+// });
+
+var roomModel = require('./app/models/room'),
+    contactModel = require('./app/models/contact');
+
 
 var homeCtrl  = require('./app/controllers/home'),
     castleCtrl  = require('./app/controllers/castle'),
@@ -35,6 +39,10 @@ require('formage').init(app, express, mongoose.models, {
     password: 'admin',
     admin_users_gui: false
 });
+
+// roomModel.find({}).exec(function (err, rooms) {
+//     app.locals.rooms = rooms;
+// });
 
 
 // Router

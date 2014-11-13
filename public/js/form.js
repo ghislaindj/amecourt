@@ -1,6 +1,7 @@
 $(document).ready(function  () {
     $("a.book").on("click", function(e) {
         e.preventDefault();
+        console.log($(this).data('room'));
         $("form.contact").show();
         $("form.contact .success").hide();
         $("form.contact .error").hide();
