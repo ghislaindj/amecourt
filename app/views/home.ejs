@@ -10,7 +10,7 @@
     <body>
 
 
-        <div id="container" style="padding-top: 224px;">
+        <div id="container">
             <header>
                 <a href="/">
                     <section class="main-top">
@@ -19,25 +19,13 @@
                 </a>
 
                 <div class="menu">
-                    <a href="#sect-castle">le chateau</a>
+                    <a href="#sect-castle">Le chateau</a>
                     <a href="#sect-events">Les réceptions</a>
-                    <a href="#sect-rooms">le gîte et les chambres d'hotes</a>
+                    <a href="#sect-rooms">Le gîte et les chambres d'hotes</a>
                 </div>
             </header>
 
             <section id="home">
-
-                <!--
-<section class="main-top">
-<img src="/img/main.png" alt="">
-<div class="menu">
-<a href="#sect-castle">le chateau</span>
-<a href="#sect-events">Les réceptions</span>
-<a href="#sect-rooms">le gîte et les chambres d'hotes</span>
-</div>
-</section>
--->
-
                 <section class="carousel">
                     <div class="main-title">
                         <div id="mainprev" class="prev"></div>
@@ -107,8 +95,8 @@
 
                 <section id="sect-castle" class="intro-3">
                     <div class="txt">
-                        <div>Un séjour au coeur de la nature</div>
-                        A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
+                        <div>Un château au coeur de la nature</div>
+                        A 80Km de Paris, le domaine d'Amécourt et son parc de 8 hectares vous garantissent une escapade dépaysante.
                     </div>
                     <div class="img-block">
                         <div class="block">
@@ -141,46 +129,44 @@
 
                 <section id="sect-events" class="intro-2">
                     <div class="txt">
-                        <div>Un lieu d'exception pour vos réceptions</div>
-                        Ici, écrire un texte qui fasse le lien vers les pages mariages, évènements associatifs, équipement, et partenaires.
+                        <div>Un lieu d'exception à votre disposition</div>
+                        Le château d'amécourt met ses plus beaux attouts au service de vos réceptions.
                     </div>
 
-                    <div class="block" style="height: 44vw;">
-                        <div class="spacer">
-                            <div class="event event-1"></div>
+                    <div class="img-block">
+                        <div class="block">
+                            <a class="spacer" href="/events">
+                                <div class="img img-1">
+                                    <div class="cover">
+                                        <div class="title">Les mariages</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/events">
+                            <div class="img img-2">
+                                <div class="cover">
+                                    <div class="title">Les séminaires</div>
+                                </div>
+                            </div>
+                        </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/events">
+                            <div class="img img-3">
+                                <div class="cover">
+                                    <div class="title">Nos équipements et partenaires</div>
+                                </div>
+                            </div>
+                        </a>
                         </div>
-                    </div><div class="block">
-                    <div class="subspacer">
-                        <div class="spacer">
-
-
-
-                        </div>
-                    </div>
-                    <div class="subspacer">
-                        <div class="spacer">
-                            <div class="event event-2"></div>
-                        </div>
-                    </div>
                     </div>
                 </section>
 
                 <section id="sect-rooms" class="intro-1">
                     <div class="txt">
-                        <div>Un séjour au coeur de la nature</div>
-                        A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
+                        <div>Votre séjour au chateau</div>
+                        Les 8 chambres et la table d'hôte d'amécourt vous acceuillent dans une ambiance authentique, moderne et rafinée.
                     </div>
-
-                    <!--
-<div class="block">
-<div class="spacer">
-<div class="txt">
-<div>Un séjour au coeur de la nature</div>
-A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueillent pour un séjour dépaysant.
-</div>
-</div>
-</div>
--->
                     <div class="block">
                         <a class="spacer" href="/room/1">
                             <div class="room room-1">
@@ -198,10 +184,10 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
                         </div>
                     </a>
                     </div><div class="block">
-                    <a class="spacer" href="/cottage">
+                    <a class="spacer" href="/room/4">
                         <div class="room room-3">
                             <div class="cover">
-                                <div class="title">Le gîte rural<br/><div class="price">5 pers. | 350€/semaine</div></div>
+                                <div class="title">Le gîte rural<br/><div class="price">6 pers. | 350€/semaine</div></div>
                             </div>
                         </div>
                     </a>
@@ -214,9 +200,6 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
                         </div>
                     </a>
                     </div>
-
-                    <!--                    <div class="btn">Voir toutes les chambres</div>-->
-
                 </section>
 
                 <section class="map">
@@ -226,8 +209,6 @@ A 80Km de Paris, le Château d'Amécourt et son parc de 8 hectares vous accueill
             </section>
             <%- include partials/footer.ejs %>
         </div>
-
-
 
     </body>
 </html>

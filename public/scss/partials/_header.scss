@@ -108,6 +108,7 @@ header{
         height: 70px;
         text-align: center;
         background-color: white;
+        @media (max-width: $break-medium){display: none;}
 
         a{
             display: inline-block;
@@ -139,14 +140,13 @@ header{
         padding-right: 40px;
         margin-right: 40px;
         font-size: 40px;
+        color: white;
+        letter-spacing: -2px;
 
         a {
             letter-spacing: -2px;
-
             color: white;
-
             vertical-align: middle;
-
         }
     }
 
