@@ -8,16 +8,17 @@ var cottagePrice = {
 };
 
 var RoomSchema = new Schema({
-  name: String,
-  customId: Number,
-  cottage: Boolean,
-  roomsCount: Number,
-  guestsCount: Number,
-  beds: String,
-  avgPrice: String,
-  description: String,
-  roomPrices: [String],
-  cottagePrices: [cottagePrice]
+    name: String,
+    customId: Number,
+    cottage: Boolean,
+    roomsCount: Number,
+    guestsCount: Number,
+    beds: String,
+    avgPrice: String,
+    description: String,
+    roomPrices: [String],
+    cottagePrices: [cottagePrice],
+    onHomepage: String
 });
 
 var room = mongoose.model('Room', RoomSchema);
@@ -34,8 +35,8 @@ function seedRooms() {
     room.find({}).exec(function (err, collection) {
         if (collection.length === 0) {
             roomsJson.rooms.forEach(function(roomJson) {
-              roomJson.customId = roomJson.id;
-              room.create(roomJson);
+                roomJson.customId = roomJson.id;
+                room.create(roomJson);
             });
         }
     });

@@ -167,31 +167,16 @@
                         <div>Votre séjour au chateau</div>
                         Les 8 chambres et la table d'hôte d'amécourt vous acceuillent dans une ambiance authentique, moderne et rafinée.
                     </div>
-                    <div class="block">
-                        <a class="spacer" href="/room/1">
-                            <div class="room room-1">
-                                <div class="cover">
-                                    <div class="title">La chambre verte<br/><div class="price">2 pers. | 75€/nuit</div></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div><div class="block">
-                    <a class="spacer" href="/room/2">
-                        <div class="room room-2">
+
+                    <% for (var i=0; i<rooms.length; i++) { %><div class="block">
+                    <a class="spacer" href="/room/<%= rooms[i].customId %>">
+                        <div class="room room-<%= i+1 %>">
                             <div class="cover">
-                                <div class="title">La maison de chasse<br/><div class="price">5 pers. | 135€/nuit</div></div>
+                                <div class="title"><%= rooms[i].name %><br/><div class="price"><%= rooms[i].guestsCount %> pers. | <%= rooms[i].avgPrice %></div></div>
                             </div>
                         </div>
                     </a>
-                    </div><div class="block">
-                    <a class="spacer" href="/room/4">
-                        <div class="room room-3">
-                            <div class="cover">
-                                <div class="title">Le gîte rural<br/><div class="price">6 pers. | 350€/semaine</div></div>
-                            </div>
-                        </div>
-                    </a>
-                    </div><div class="block">
+                    </div><% } %><div class="block">
                     <a class="spacer" href="/rooms">
                         <div class="room room-4">
                             <div class="cover">
