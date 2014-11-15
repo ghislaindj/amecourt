@@ -24,7 +24,7 @@
                     <div class="summary">
                         <span>
                             <div class="icons key"></div>
-                            <div class="title"><%= roomInfos.roomsCount %> chambre<% if(roomInfos.roomsCount > 1) { %><%= 's' %><% } %></div>
+                            <div class="title"><%= roomInfos.roomsCount %> pièce<% if(roomInfos.roomsCount > 1) { %><%= 's' %><% } %></div>
                         </span><span>
                         <div class="icons people"></div>
                         <div class="title"><%= roomInfos.guestsCount %> personne<% if(roomInfos.guestsCount > 1) { %><%= 's' %><% } %></div>
@@ -194,19 +194,10 @@
                     </div>
                 </article>
                 <%- include ../partials/form.ejs %>
-
-
-
-
-
-
-
-
-
-
             </div>
 
             <%- include ../partials/footer.ejs %>
         </div>
     </body>
+    <%- include ../partials/analytics.ejs %>
 </html>

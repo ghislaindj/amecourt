@@ -118,8 +118,8 @@ header .content {
   width: 30px;
   height: 30px;
   background: url(/img/sprite.png) no-repeat;
-  -webkit-background-size: 380px 50px;
-  background-size: 380px 50px;
+  -webkit-background-size: 380px 76px;
+  background-size: 380px 76px;
 }
 
 .icons.key {
@@ -139,8 +139,8 @@ header .content {
   width: 20px;
   height: 20px;
   background: url(/img/sprite.png) no-repeat;
-  -webkit-background-size: 380px 50px;
-  background-size: 380px 50px;
+  -webkit-background-size: 380px 76px;
+  background-size: 380px 76px;
 }
 
 .mini-icons.wifi {
@@ -214,6 +214,44 @@ header .content {
 
 .mini-icons.campfire {
   background-position: -340px -30px;
+}
+
+.form-ico {
+  display: inline-block;
+  margin: 2px auto;
+  width: 26px;
+  height: 26px;
+  background: url(/img/sprite.png) no-repeat;
+  -webkit-background-size: 380px 76px;
+  background-size: 380px 76px;
+}
+
+.form-ico.from {
+  background-position: 0 -50px;
+}
+
+.form-ico.to {
+  background-position: -26px -50px;
+}
+
+.form-ico.room {
+  background-position: -52px -50px;
+}
+
+.form-ico.user {
+  background-position: -78px -50px;
+}
+
+.form-ico.mail {
+  background-position: -104px -50px;
+}
+
+.form-ico.guests {
+  background-position: -130px -50px;
+}
+
+.form-ico.phone {
+  background-position: -156px -50px;
 }
 
 .img-block .block {
@@ -1188,10 +1226,49 @@ footer .mobile .col.right {
 }
 
 .contact-container form {
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  overflow: hidden;
+  vertical-align: top;
+  max-width: 610px;
+  width: 100%;
+  background: white;
   border: solid #d6d6d6 1px;
+  border-radius: 4px;
+  padding: 20px 40px 30px 40px;
+}
+
+.contact-container form .field {
+  position: relative;
+  margin: 10px 0;
+}
+
+.contact-container form .field input {
+  text-align: left;
+  padding: 0px 8px 0px 34px;
+  color: #4f4f52;
+  margin: 0;
+  background-color: #e5e6ea;
+  border: solid #d6d6d6 1px;
+  height: 42px;
+  width: 100%;
+}
+
+.contact-container form .field input:focus {
+  background-color: white;
+  border: solid #009adb 1px;
+  outline: 0;
+}
+
+.contact-container form .field label,
+.contact-container form .field-alt label {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+}
+
+.contact-container form .title {
+  font-size: 26px;
+  padding: 8px 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .contact-container form fieldset {
@@ -1199,13 +1276,6 @@ footer .mobile .col.right {
   padding: 0;
   border: none;
   text-align: center;
-}
-
-.contact-container form fieldset .title {
-  background-color: #eeeeee;
-  border-bottom: solid #d6d6d6 1px;
-  font-size: 26px;
-  padding: 4px 10px;
 }
 
 .contact-container form fieldset .form-tab {
