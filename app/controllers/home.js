@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 module.exports = {
     get: function(req, res) {
         Room.find({onHomepage: true}).exec(function (err, rooms) {
-            res.render('home', {rooms: rooms;});
+            res.render('home', {rooms: rooms});
         });
     }
 };
