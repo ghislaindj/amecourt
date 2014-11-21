@@ -1,8 +1,11 @@
-footer{
+footer {
     position: absolute;
     bottom: 0; right: 0; left: 0;
-    padding: 20px 20px 12px 20px;
     background-color: $grey-0;
+
+    > div {
+        padding: 20px 20px 12px 20px;
+    }
 
     .col{
         display: inline-block;
@@ -33,9 +36,13 @@ footer{
             &:not(:last-child){padding-right:10px;}
             @media (max-width: $break-small){&:not(:last-child){padding-right:4px;}}
         }
+
+        .fb-like {
+            line-height: 20px;
+        }
     }
 
-    .desktop{
+    .desktop {
         @media (max-width: $break-small){ display: none; }
     }
 
@@ -43,5 +50,33 @@ footer{
         display: none;
         @media (max-width: $break-small){ display: block; }
         .col.right{width: 100%; text-align: center;}
+    }
+
+    .seo-footer {
+        background-color: $dark-grey;
+        text-align: center;
+        line-height: initial;
+
+        .col {
+            width: 45%;
+            &.left {
+                text-align: left;
+                @media (max-width: $break-small){text-align: center;}
+            }
+            &.right{
+                text-align: right;
+                @media (max-width: $break-small){text-align: center;}
+            }
+            @media (max-width: $break-small){width: 90%;}
+
+            li {
+                line-height: 20px;
+                width: 100%;
+                a {
+                    color: $medium-grey;
+                }
+            }
+        }
+
     }
 }
