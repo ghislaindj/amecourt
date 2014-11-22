@@ -3,11 +3,39 @@
     <head>
         <title>Château d'Amécourt : Séminaires, Mariage & Chambres d'hôtes</title>
         <%- include partials/head.ejs %>
+        <script type="text/javascript" src="/js/scroll.js"></script>
     </head>
-    <body>
-        <div id="container">
 
-            <p>Organisation d'évènements</p>
+    <body>
+        <div id="container" class="imgback" style="padding-top: 155px;">
+            <header>
+                <a href="/">
+                    <section class="main-top">
+                        <img src="/img/main.png" alt="">
+                    </section>
+                </a>
+            </header>
+            <div id="events">
+                <div class="pg-title">
+                    <span class="main"><a href="/#sect-events">Evénements</a></span>
+                    <a href="#wedding"><span class="sub">Mariages - </span></a>
+                    <a href="#convention"><span class="sub">Séminaires - </span></a>
+                    <a href="#partners"><span class="sub">Equipements & Partenaires</span></a>
+
+                </div>
+
+                <article>
+                    <section id="wedding">
+                        <h3>Mariages</h3>
+                    </section>
+                    <section id="convention">
+                        <h3>Séminaires</h3>
+                    </section>
+                    <section id="partners">
+                        <h3>Equipements & Partenaires</h3>
+                    </section>
+                </article>
+            </div>
 
             <%- include partials/footer.ejs %>
 
