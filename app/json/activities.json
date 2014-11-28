@@ -1,0 +1,92 @@
+{
+  "activities": [
+    {
+      "id": 0,
+      "name": "Château d'amécourt",
+      "link": "",
+      "geotag": "49.3840389,1.7329327",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 1,
+      "name": "Collégiale Saint-Pierre de Neuf-Marché",
+      "link": "http://fr.wikipedia.org/wiki/Coll%C3%A9giale_Saint-Pierre_de_Neuf-March%C3%A9",
+      "geotag": "49.4238889,1.7183333",
+      "city": "Neuf-Marché",
+      "description": "La collégiale Saint-Pierre à Neuf-Marché est aujourd’hui l’église paroissiale de la commune. Elle a été fondée par Rollon suite à la création du duché de Normandie. L'église fait l’objet d’un classement au titre des monuments historiques depuis le 4 octobre 2004. La Collégiale Saint Pierre de Neuf-Marché du XIe avec son présbytère. La collégiale sera le lieu de deux évènements importants: le mariage le 31 août 1158 entre Marguerite de France, fille du roi de France Louis VII, et Henri le Jeune, fils du roi d'Angleterre Henri II Plantagenêt; et en juillet 1160, elle accueille le concile des évêques d'Angleterre et de Normandie."
+    },
+    {
+      "id": 2,
+      "name": "Abbaye Saint-Germer-de-Fly ",
+      "link": "http://fr.wikipedia.org/wiki/Abbaye_Saint-Germer-de-Fly",
+      "geotag": "49.4430556,1.78",
+      "city": "Saint-Germer-de-Fly",
+      "description": "La remarquable Eglise Abbatiale du XIIème siècle et Sainte-Chapelle du XIIIème siècle reliées entre-elles par un atrium.Elle ressemble à la Sainte-Chapelle de Paris de 11 ans son aînée mais sa destination était d'être une chapelle funéraire et non une chapelle reliquaire."
+    },
+    {
+      "id": 3,
+      "name": "Château de Gisors",
+      "link": "http://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Gisors",
+      "geotag": "49.2808333,1.7744444",
+      "city": "Gisors",
+      "description": "La forteresse de Gisors est un impressionnant château qui offre au regard un témoignage exceptionnel de l'architecture militaire médiévale anglo-normande."
+    },
+    {
+      "id": 4,
+      "name": "Fondation Claude Monet",
+      "link": "",
+      "geotag": "49.07536,1.533732",
+      "city": "Giverny",
+      "description": "Ancienne maison de Claude Monet"
+    },
+    {
+      "id": 5,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 7,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 9,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    },
+    {
+      "id": 10,
+      "name": "",
+      "link": "",
+      "geotag": "",
+      "city": "",
+      "description": ""
+    }
+  ]
+}

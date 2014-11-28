@@ -1,73 +1,73 @@
 {
-    "rooms": [
+  "rooms": [
+    {
+      "id": 1,
+      "name": "La chambre verte",
+      "cottage": false,
+      "roomsCount": 1,
+      "guestsCount": 2,
+      "beds": "1 lit double",
+      "avgPrice": "75€/nuit",
+      "description": "Au 2ème étage du château d'Amécourt, au coeur d'un parc de 8 hectares, la chambre verte propose une très belle qualité d'aménagement et de décoration. Équipée d'un 1 lit double 160x200cm, elle dispose également d'une salle de bain privative entièrement rénovée avec baignoire, douche et WC. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
+      "roomPrices": ["65€/nuit", "75€/nuit"],
+      "onHomepage": true
+    },
+    {
+      "id": 2,
+      "name": "La maison de chasse",
+      "cottage": false,
+      "roomsCount": 3,
+      "guestsCount": 5,
+      "beds": "2 lits doubles, 1 simple",
+      "avgPrice": "135€/nuit",
+      "description": "Au sein d'une dépendance du château d'Amécourt, au coeur d'un parc de 8 hectares, la maison de chasse propose une très belle qualité d'aménagement et de décoration. Ses trois chambres indépendantes partagent une salle d'eau et un WC séparé entièrement rénovés. Elles disposent de deux lits doubles 160x200cm et d'un lit simple 90x200cm Elles sont de plein pied avec des portes extérieures donnant sur une petite terrasse couverte. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
+      "roomPrices": ["65€/nuit", "75€/nuit", "95€/nuit", "115€/nuit", "135€/nuit"],
+      "onHomepage": true
+    },
+    {
+      "id": 3,
+      "name": "La chambre beige",
+      "cottage": false,
+      "roomsCount": 1,
+      "guestsCount": 2,
+      "beds": "1 lit double",
+      "avgPrice": "75€/nuit",
+      "description": "Au 2ème étage du château d'Amécourt, au coeur d'un parc de 8 hectares, la chambre beige propose une très belle qualité d'aménagement et de décoration. Équipée d'un 1 lit double 160x200cm, elle dispose également d'une salle de bain privative entièrement rénovée avec baignoire, douche et WC. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
+      "roomPrices": ["65€/nuit", "75€/nuit"],
+      "onHomepage": false
+    },
+    {
+      "id": 4,
+      "name": "Le gîte Les deux cèdres",
+      "cottage": true,
+      "roomsCount": 3,
+      "guestsCount": 6,
+      "beds": "2 lits doubles, 2 simples",
+      "avgPrice": "350€/semaine",
+      "description": "Dépendance du château d'Amécourt, le gîte ouvre sur une vue dégagée sur son parc de 8 hectares et la vallée. Le gîte de 90m2 occupe deux étages. Au rez de chaussée, il dispose d'un salon, d'une salle à manger, d'une cuisine, d'une salle de bains et de WC. L'étage dispose de 2 chambres équipées chacunes d'un lit double 160x200cm et d'une troisième chambre équipée de 2 lits simples. Chacune des chambres sont équipées d'une salle d'eau avec WC. Le gîte offre un confort et une décoration résolument contemporains, l'accueil est attentionné. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
+      "cottagePrices": [
         {
-            "id": 1,
-            "name": "La chambre verte",
-            "cottage": false,
-            "roomsCount": 1,
-            "guestsCount": 2,
-            "beds": "1 lit double",
-            "avgPrice": "75€/nuit",
-            "description": "Au 2ème étage du château d'Amécourt, au coeur d'un parc de 8 hectares, la chambre verte propose une très belle qualité d'aménagement et de décoration. Équipée d'un 1 lit double 160x200cm, elle dispose également d'une salle de bain privative entièrement rénovée avec baignoire, douche et WC. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
-            "roomPrices": ["65€/nuit", "75€/nuit"],
-            "onHomepage": true
+          "title": "Caution",
+          "weekPrice": "300€"
         },
         {
-            "id": 2,
-            "name": "La maison de chasse",
-            "cottage": false,
-            "roomsCount": 3,
-            "guestsCount": 5,
-            "beds": "2 lits doubles, 1 simple",
-            "avgPrice": "135€/nuit",
-            "description": "Au sein d'une dépendance du château d'Amécourt, au coeur d'un parc de 8 hectares, la maison de chasse propose une très belle qualité d'aménagement et de décoration. Ses trois chambres indépendantes partagent une salle d'eau et un WC séparé entièrement rénovés. Elles disposent de deux lits doubles 160x200cm et d'un lit simple 90x200cm Elles sont de plein pied avec des portes extérieures donnant sur une petite terrasse couverte. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
-            "roomPrices": ["65€/nuit", "75€/nuit", "95€/nuit", "115€/nuit", "135€/nuit"],
-            "onHomepage": true
+          "title": "Jour de l'An",
+          "weekPrice": "390€/semaine"
         },
         {
-            "id": 3,
-            "name": "La chambre beige",
-            "cottage": false,
-            "roomsCount": 1,
-            "guestsCount": 2,
-            "beds": "1 lit double",
-            "avgPrice": "75€/nuit",
-            "description": "Au 2ème étage du château d'Amécourt, au coeur d'un parc de 8 hectares, la chambre beige propose une très belle qualité d'aménagement et de décoration. Équipée d'un 1 lit double 160x200cm, elle dispose également d'une salle de bain privative entièrement rénovée avec baignoire, douche et WC. L'accueil est attentionné, un petit déjeuner est servi dans la salle à manger du chateau entre 8h00 et 10h. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
-            "roomPrices": ["65€/nuit", "75€/nuit"],
-            "onHomepage": false
+          "title": "Haute saison",
+          "weekPrice": "490€/semaine"
         },
         {
-            "id": 4,
-            "name": "Le gîte Les deux cèdres",
-            "cottage": true,
-            "roomsCount": 3,
-            "guestsCount": 6,
-            "beds": "2 lits doubles, 2 simples",
-            "avgPrice": "350€/semaine",
-            "description": "Dépendance du château d'Amécourt, le gîte ouvre sur une vue dégagée sur son parc de 8 hectares et la vallée. Le gîte de 90m2 occupe deux étages. Au rez de chaussée, il dispose d'un salon, d'une salle à manger, d'une cuisine, d'une salle de bains et de WC. L'étage dispose de 2 chambres équipées chacunes d'un lit double 160x200cm et d'une troisième chambre équipée de 2 lits simples. Chacune des chambres sont équipées d'une salle d'eau avec WC. Le gîte offre un confort et une décoration résolument contemporains, l'accueil est attentionné. Proche de Gisors et de la forêt de Lyons, le chateau d'Amécourt permet de nombreuses visites de sites remarquables.",
-            "cottagePrices": [
-                {
-                    "title": "Caution",
-                    "weekPrice": "300€"
-                },
-                {
-                    "title": "Jour de l'An",
-                    "weekPrice": "390€/semaine"
-                },
-                {
-                    "title": "Haute saison",
-                    "weekPrice": "490€/semaine"
-                },
-                {
-                    "title": "Moyenne saison",
-                    "weekPrice": "390€/semaine - 280€/week-end"
-                },
-                {
-                    "title": "Basse saison",
-                    "weekPrice": "350€/semaine - 220€/week-end"
-                }
-            ],
-            "onHomepage": true
+          "title": "Moyenne saison",
+          "weekPrice": "390€/semaine - 280€/week-end"
+        },
+        {
+          "title": "Basse saison",
+          "weekPrice": "350€/semaine - 220€/week-end"
         }
-    ]
+      ],
+      "onHomepage": true
+    }
+  ]
 }
