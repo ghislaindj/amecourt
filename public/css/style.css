@@ -1137,3 +1137,21 @@ footer {
       #events article section .col.img-block .event-3 {
         background: url("../img/event-3.jpg") 50% 50% no-repeat;
         background-size: auto 100%; }
+
+#bikes article {
+  padding: 20px;
+  border-bottom: solid #dddddd 3px;
+  background-color: #fcfcfc; }
+  #bikes article > div {
+    padding: 10px; }
+  #bikes article section {
+    padding: 30px 0 60px 0; }
+    #bikes article section:not(:last-child) {
+      border-bottom: solid #cfd1df 6px; }
+    #bikes article section table {
+      width: 100%; }
+    #bikes article section table, #bikes article section th, #bikes article section td {
+      border: 1px solid black;
+      border-collapse: collapse; }
+    #bikes article section th, #bikes article section td {
+      padding: 15px; }

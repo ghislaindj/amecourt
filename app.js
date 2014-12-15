@@ -50,6 +50,7 @@ app.get('/', homeCtrl.get);
 app.get('/castle/history', castleCtrl.getHistory);
 app.get('/castle/site', castleCtrl.getSite);
 app.get('/castle/activities', castleCtrl.getActivities);
+app.get('/castle/bikes', castleCtrl.getBikes);
 
 app.get('/rooms', roomsCtrl.getRooms);
 app.get('/room/:room', roomsCtrl.getRoom);
