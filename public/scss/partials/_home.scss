@@ -173,6 +173,12 @@
                         background-size: 100% auto;
                         @media (max-width: $break-small){background-size: 140% auto;}
                     }
+
+                    &.food{
+                        background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
+                        background-size: auto 100%;
+                        @media (max-width: $break-small){background-size: 140% auto;}
+                    }
                 }
 
                 .cover{
@@ -307,5 +313,45 @@
 
         @media (max-width: $break-xsmall){height: 175px;}
         @media (min-width: $break-xlarge){height: 630px;}
+    }
+
+    .intro-4 {
+        border-bottom: solid rgb(207, 209, 223) 4px;
+        position: relative;
+        width: 100%;
+        background-color: $grey-1;
+        overflow: hidden;
+        padding: 20px 10px 60px 10px;
+        @media (max-width: $break-small){padding-bottom: 20px;}
+
+        .txt{
+            margin: 30px 0;
+            padding: 0 20px;
+            font-weight: 200;
+            font-size: 22px;
+            text-align: center;
+            @media (max-width: $break-medium){font-size: 16px;}
+        }
+
+        .welcome {
+            p {margin: 5px;}
+            .quote {
+                font-size: 25px;
+            }
+        }
+
+        address {
+            font-size: 16px;
+            color: $grey-6;
+        }
+
+        .rating {
+            display: none;
+        }
+
+        img.alain {
+            width: 50px;
+            vertical-align: middle;
+        }
     }
 }

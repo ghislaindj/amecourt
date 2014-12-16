@@ -11,7 +11,7 @@
     <body>
 
 
-        <div id="container">
+        <div id="container" itemscope itemtype="http://schema.org/BedAndBreakfast">
             <header>
                 <a href="/">
                     <section class="main-top">
@@ -20,9 +20,9 @@
                 </a>
 
                 <div class="menu">
-                    <a href="#sect-castle">Le château</a>
-                    <a href="#sect-events">Les réceptions</a>
-                    <a href="#sect-rooms">Le gîte et les chambres d'hotes</a>
+                    <a href="#sect-events">Mariage & Réceptions familiales</a>
+                    <a href="#sect-rooms">Gîte & Chambres d'hôtes</a>
+                    <a href="#sect-castle">Le lieu & Sa région</a>
                 </div>
             </header>
 
@@ -39,97 +39,12 @@
                     </div>
                 </section>
 
-                <script>
-                    document.getElementById('mainprev').addEventListener('click', function() {
-                        var currentImg = document.getElementsByClassName('img current')[0],
-                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
-                            nextNum;
-
-                        if(currentNum > 1){
-                            nextNum = currentNum - 1;
-                        } else {
-                            nextNum = 5;
-                        }
-
-                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
-                        currentImg.className = 'img img-' + (currentNum).toString();
-                        nextImg.className += ' current';
-
-                        if (nextImg.className.indexOf('left') == -1) {
-                            nextImg.className = 'img left unanimated img-' + (nextNum).toString();
-                        }
-
-                        setTimeout(function(){
-                            nextImg.className = 'img current img-' + (nextNum).toString();
-                            currentImg.className += ' right';
-                        }, 20);
-                    }, false);
-
-                    document.getElementById('mainnext').addEventListener('click', function() {
-                        var currentImg = document.getElementsByClassName('img current')[0],
-                            currentNum = parseInt(/img-(\d+)/.exec(currentImg.className)[1], 10),
-                            nextNum;
-
-                        if(currentNum < 5){
-                            nextNum = currentNum + 1;
-                        } else {
-                            nextNum = 1;
-                        }
-
-                        var nextImg = document.getElementsByClassName('img-' + (nextNum).toString())[0];
-                        currentImg.className = 'img img-' + (currentNum).toString();
-                        nextImg.className += ' current';
-
-                        if (nextImg.className.indexOf('right') == -1) {
-                            nextImg.className = 'img right unanimated img-' + (nextNum).toString();
-                        }
-
-                        setTimeout(function(){
-                            nextImg.className = 'img current img-' + (nextNum).toString();
-                            currentImg.className += ' left';
-                        }, 20);
-                    }, false);
-
-                </script>
-
-                <section id="sect-castle" class="intro-3">
-                    <div class="txt">
-                        <div>Un château au cœur de la nature</div>
-                        Envie de dépaysement ? le château d’Amécourt vous accueille dans son parc de 8ha à seulement 80 km de Paris.
-                    </div>
-                    <div class="img-block">
-                        <div class="block">
-                            <a class="spacer" href="/castle/history">
-                                <div class="img img-1">
-                                    <div class="cover">
-                                        <div class="title">L'histoire du château</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div><div class="block">
-                        <a class="spacer" href="/castle/bikes">
-                            <div class="img img-2">
-                                <div class="cover">
-                                    <div class="title">Location de vélos</div>
-                                </div>
-                            </div>
-                        </a>
-                        </div><div class="block">
-                        <a class="spacer" href="/castle/activities">
-                            <div class="img img-3">
-                                <div class="cover">
-                                    <div class="title">Les activités de la région</div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    </div>
-                </section>
+                <%- include partials/carousel.ejs %>
 
                 <section id="sect-events" class="intro-2">
                     <div class="txt">
-                        <div>Un lieu d'exception à votre disposition</div>
-                        Le château d'Amécourt met ses plus beaux atouts au service de vos réceptions.
+                        <div>Louez un château rien que pour vous !</div>
+                        Le château d'Amécourt vous propose un accueille dans un cadre familial et majestueux : anniversaires, mariages, réunions de famille, nous vous proposons des offres sur mesure et abordable [...]
                     </div>
 
                     <div class="img-block">
@@ -164,7 +79,7 @@
                 <section id="sect-rooms" class="intro-1">
                     <div class="txt">
                         <div>Votre séjour au château</div>
-                        Profitez de notre table d'hôte et d’une de nos 8 chambres raffinée et décorées avec goût.
+                        Profitez de l’une de nos chambres raffinées ou de l'un de nos gîtes, ou bien faites le choix de privatisez l'ensemble de nos 16 couchages dans la configuration de votre choix.
                     </div>
 
                     <% for (var i=0; i<rooms.length; i++) { %><div class="block">
@@ -183,11 +98,82 @@
                             </div>
                         </div>
                     </a>
+                    </div><div class="block">
+                    <a class="spacer" href="/rooms">
+                        <div class="room food">
+                            <div class="cover">
+                                <div class="title">Table d'hôtes</div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </section>
+
+                <section id="sect-castle" class="intro-3">
+                    <div class="txt">
+                        <div>Un château au cœur de la nature</div>
+                        Envie de dépaysement ? le château d’Amécourt vous accueille dans son parc de 8ha à seulement 80 km de Paris.
+                    </div>
+                    <div class="img-block">
+                        <div class="block">
+                            <a class="spacer" href="/castle/history">
+                                <div class="img img-1">
+                                    <div class="cover">
+                                        <div class="title">Le lieu & son histoire</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/castle/activities">
+                            <div class="img img-3">
+                                <div class="cover">
+                                    <div class="title">Les activités de la région</div>
+                                </div>
+                            </div>
+                        </a>
+                        </div><div class="block">
+                        <a class="spacer" href="/castle/bikes">
+                            <div class="img img-2">
+                                <div class="cover">
+                                    <div class="title">Location de vélos</div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
                     </div>
                 </section>
 
                 <section class="map">
                     <div id="map-canvas" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
+                </section>
+
+                <section id="sect-family" class="intro-4">
+                    <div class="txt">
+                        <div class="welcome">
+                            <p class="quote">"En espérant vous accueillir bientôt dans notre maison"</p>
+                            <p class="author">
+                                Alain & Claire Béal ainsi que leur famille
+                                <img src="/img/alain.jpg" class="alain img-circle" alt="Alain Béal" />
+                            </p>
+                        </div>
+
+                        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="name">Château d'Amécourt</span><br />
+                            <span itemprop="streetAddress">2 Rue Du Buisson Bleu</span><br />
+                            <span itemprop="postalCode">27140</span> <span itemprop="addressLocality">Amécourt</span><br />
+                            <span itemprop="addressCountry">France</span>
+                            <p>
+                                <span itemprop="telephone" content="+33232159967">02 32 15 99 67</span><br />
+                                <a href="mailto:contact@chateau-amecourt.com" itemprop="email" content="contact@chateau-amecourt.com">contact@chateau-amecourt.com</a>
+                            </p>
+                            <div class="rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                <span itemprop="name">Château d'Amécourt</span><br />
+                                <span itemprop="ratingValue">5</span>
+                                <span itemprop="reviewCount">3</span>
+                            </div>
+                        </address>
+
+                    </div>
                 </section>
 
             </section>
