@@ -24,5 +24,12 @@ module.exports = {
                 res.redirect('/');
             }
         });
-    }
+    },
+
+    getRoomsNear: function(req, res, place) {
+        Room.find({}).exec(function (err, rooms) {
+            res.render('rooms/nearby', {rooms: rooms, place: place});
+        });
+    },
+
 };

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>Château d'Amécourt</title>
+        <%- include ../partials/head.ejs %>
+    </head>
+    <body>
+        <div id="container" class="imgback" style="padding-top: 155px;">
+            <header>
+                <a href="/">
+                    <section class="main-top">
+                        <img src="/img/main.png" alt="">
+                    </section>
+                </a>
+            </header>
+
+            <div id="rooms">
+                <div class="pg-title">
+                    <span class="main"><a href="/rooms">Chambres d'hôtes proches de <%= place %></a></span>
+                </div>
+
+                <article>
+                    <% for(var i=0; i<rooms.length; i++) { %><div class="block">
+                    <a class="spacer img-block room<%= rooms[i].customId %>" href="/room/<%= rooms[i].customId %>">
+                        <div class="img img-1">
+                            <div class="cover">
+                                <div class="title"><%= rooms[i].name %><br/><div class="price"><%= rooms[i].guestsCount %> pers. | <%= rooms[i].avgPrice %></div></div>
+                            </div>
+                        </div>
+                    </a>
+                    </div><% } %>
+
+                </article>
+            </div>
+
+
+            <%- include ../partials/footer.ejs %>
+        </div>
+    </body>
+    <%- include ../partials/analytics.ejs %>
+</html>

@@ -74,5 +74,11 @@ app.get('/logout', function(req, res) {
     res.end();
 });
 
+var citiesJson = require('./resources/cities.json');
+citiesJson.cities.forEach(function(place) {
+    app.get('/rooms-near-' + place, function(req, res) {
+        roomsCtrl.getRoomsNear(req, res, place);
+    });
+});
 
 app.listen(config.port);
