@@ -11,6 +11,7 @@ var config = {
     },
     port: 3000,
     db: 'mongodb://localhost/amecourt-development',
+    publicUrl: 'http://localhost:3000',
     mailer: {
       auth: {
         user: secret.mandrill.user,
@@ -28,6 +29,7 @@ var config = {
     },
     port: 3100,
     db: 'mongodb://localhost/amecourt-staging',
+    publicUrl: 'http://www.chateau-amecourt.com',
     mailer: {
       auth: {
         user: secret.mandrill.user,

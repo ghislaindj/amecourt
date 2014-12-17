@@ -3,7 +3,8 @@ var express = require('express'),
     glob = require('glob'),
     mongoose = require('mongoose'),
     initializer = require('./helpers/initializer'),
-    auth = require('./helpers/auth');
+    auth = require('./helpers/auth'),
+    sm = require('sitemap');
 
 mongoose.connect(config.db);
 var db = mongoose.connection;
@@ -74,11 +75,52 @@ app.get('/logout', function(req, res) {
     res.end();
 });
 
-var citiesJson = require('./resources/cities.json');
-citiesJson.cities.forEach(function(place) {
-    app.get('/rooms-near-' + place, function(req, res) {
-        roomsCtrl.getRoomsNear(req, res, place);
+// Custom URL for sitemaps
+
+var urls = [
+        { url: '/',  changefreq: 'daily', priority: 0.3 },
+        { url: '/castle/history',  changefreq: 'daily', priority: 0.3 },
+        { url: '/castle/history', changefreq: 'daily', priority: 0.3 },
+        { url: '/castle/site', changefreq: 'daily', priority: 0.3 },
+        { url: '/castle/activities', changefreq: 'daily', priority: 0.3 },
+        { url: '/castle/bikes', changefreq: 'daily', priority: 0.3 },
+        { url: '/rooms', changefreq: 'daily', priority: 0.3 },
+        { url: '/events', changefreq: 'daily', priority: 0.3 },
+        { url: '/book', changefreq: 'daily', priority: 0.3 }
+    ];
+
+[1, 2, 3, 4].forEach(function(roomId) {
+    urls.push({url: '/room/'+roomId,  changefreq: 'daily', priority: 0.3});
+})
+
+// Cities
+
+var citiesJson = require('./app/json/cities.json');
+var cities = citiesJson.cities;
+cities = cities.concat(citiesJson.places, citiesJson.normandy);
+
+cities.forEach(function(city) {
+    var path = '/rooms-near-' + encodeURIComponent(city);
+    app.get(path, function(req, res) {
+        roomsCtrl.getRoomsNear(req, res, city);
     });
+
+    urls.push({url: path,  changefreq: 'daily', priority: 0.3})
+});
+
+// Sitemap
+
+var sitemap = sm.createSitemap ({
+    hostname: config.publicUrl,
+    cacheTime: 600000,
+    urls: urls
+});
+
+app.get('/sitemap.xml', function(req, res) {
+  sitemap.toXML( function (xml) {
+      res.header('Content-Type', 'application/xml');
+      res.send( xml );
+  });
 });
 
 app.listen(config.port);
