@@ -6,3 +6,5 @@ public/components
 resources/.DS_Store
 
 config/secret.js
+
+npm-debug.log
