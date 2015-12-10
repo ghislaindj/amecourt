@@ -1,2 +1,2 @@
-Mise en prod
-  bundle exec cap staging deploy
+Mise en prod :
+bundle exec cap staging deploy

@@ -76,9 +76,11 @@
 
         .block{
           height: 500px;
-          @media (max-width: $break-medium){height: 450px;}
-          @media (max-width: $break-small){height: 450px;}
-          @media (min-width: $break-xlarge){height: 450px;}
+          @media (max-width: $break-medium){height: 500px;}
+          @media (max-width: $break-small){height: 350px;}
+          @media (max-width: $break-msmall){height: 300px;}
+          @media (max-width: $break-xsmall){height: 200px;}
+          @media (min-width: $break-xlarge){height: 500px;}
           
           .spacer{left: 0; right: 0;}
         }

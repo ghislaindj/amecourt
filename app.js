@@ -25,6 +25,7 @@ var homeCtrl  = require('./app/controllers/home'),
     castleCtrl  = require('./app/controllers/castle'),
     roomsCtrl  = require('./app/controllers/rooms'),
     eventsCtrl  = require('./app/controllers/events'),
+    picturesCtrl  = require('./app/controllers/pictures'),
     weddingsCtrl  = require('./app/controllers/weddings'),
     contactCtrl  = require('./app/controllers/contact'),
     loginCtrl = require('./app/controllers/login'),
@@ -58,6 +59,7 @@ app.get('/room/:room', roomsCtrl.getRoom);
 
 app.get('/events', eventsCtrl.get);
 app.get('/weddings', weddingsCtrl.get);
+app.get('/pictures', picturesCtrl.get);
 
 app.get('/book', contactCtrl.get);
 app.post('/book', contactCtrl.create);

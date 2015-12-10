@@ -624,6 +624,8 @@ footer {
         #home .carousel .main-title .img.img-5 {
           background: url("../img/main-img-5.jpg") 50% 100% no-repeat;
           background-size: 105% auto; }
+  #home .home-btns {
+    text-align: center; }
   #home .intro-1 {
     position: relative;
     width: 100%;
@@ -1214,13 +1216,19 @@ footer {
         height: 500px; }
         @media (max-width: 980px) {
           #events article section .img-block .block {
-            height: 450px; } }
+            height: 500px; } }
         @media (max-width: 589px) {
           #events article section .img-block .block {
-            height: 450px; } }
+            height: 350px; } }
+        @media (max-width: 400px) {
+          #events article section .img-block .block {
+            height: 300px; } }
+        @media (max-width: 320px) {
+          #events article section .img-block .block {
+            height: 200px; } }
         @media (min-width: 1600px) {
           #events article section .img-block .block {
-            height: 450px; } }
+            height: 500px; } }
         #events article section .img-block .block .spacer {
           left: 0;
           right: 0; }
@@ -1273,13 +1281,19 @@ footer {
         height: 500px; }
         @media (max-width: 980px) {
           #weddings article section .img-block .block {
-            height: 450px; } }
+            height: 500px; } }
         @media (max-width: 589px) {
           #weddings article section .img-block .block {
-            height: 450px; } }
+            height: 350px; } }
+        @media (max-width: 400px) {
+          #weddings article section .img-block .block {
+            height: 300px; } }
+        @media (max-width: 320px) {
+          #weddings article section .img-block .block {
+            height: 200px; } }
         @media (min-width: 1600px) {
           #weddings article section .img-block .block {
-            height: 450px; } }
+            height: 500px; } }
         #weddings article section .img-block .block .spacer {
           left: 0;
           right: 0; }
@@ -1297,6 +1311,119 @@ footer {
         background-size: auto 100%; }
       #weddings article section .img-block .event-4 {
         background: url("../img/event-4.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+
+#pictures article {
+  border-bottom: solid #dddddd 3px;
+  background-color: #fcfcfc; }
+  #pictures article section {
+    padding: 30px 0 60px 0; }
+    #pictures article section:not(:last-child) {
+      border-bottom: solid #cfd1df 6px; }
+    #pictures article section .img-block {
+      margin-bottom: 12px; }
+      #pictures article section .img-block .block {
+        width: 100%; }
+      #pictures article section .img-block .block {
+        height: 500px; }
+        @media (max-width: 980px) {
+          #pictures article section .img-block .block {
+            height: 500px; } }
+        @media (max-width: 589px) {
+          #pictures article section .img-block .block {
+            height: 350px; } }
+        @media (max-width: 400px) {
+          #pictures article section .img-block .block {
+            height: 300px; } }
+        @media (max-width: 320px) {
+          #pictures article section .img-block .block {
+            height: 200px; } }
+        @media (min-width: 1600px) {
+          #pictures article section .img-block .block {
+            height: 500px; } }
+        #pictures article section .img-block .block .spacer {
+          left: 0;
+          right: 0; }
+      #pictures article section .img-block .img {
+        max-width: 100%;
+        height: 100%; }
+      #pictures article section .img-block .pics-1 {
+        background: url("../img/pics-1.png") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .pics-2 {
+        background: url("../img/pics-2.png") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .event-1 {
+        background: url("../img/event-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .event-2 {
+        background: url("../img/event-2.png") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .event-3 {
+        background: url("../img/event-3.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .event-4 {
+        background: url("../img/event-4.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .histo-1 {
+        background: url("../img/castle-history-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .histo-2 {
+        background: url("../img/castle-history-2.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .histo-3 {
+        background: url("../img/castle-history-3.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .site-1 {
+        background: url("../img/castle-site-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .img-1 {
+        background: url("../img/main-img-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .img-2 {
+        background: url("../img/main-img-2.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .img-3 {
+        background: url("../img/main-img-3.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .img-4 {
+        background: url("../img/main-img-4.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .img-5 {
+        background: url("../img/main-img-5.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .room-1 {
+        background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .room-2 {
+        background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .room-3 {
+        background: url("../img/room-4-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .room-4 {
+        background: url("../img/main-rooms.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .food {
+        background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgb-1 {
+        background: url("../img/main-event-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgb-2 {
+        background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgb-3 {
+        background: url("../img/main-event-3.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgc-1 {
+        background: url("../img/main-castle-1.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgc-2 {
+        background: url("../img/main-castle-2.jpg") 50% 50% no-repeat;
+        background-size: auto 100%; }
+      #pictures article section .img-block .imgc-3 {
+        background: url("../img/main-castle-3.jpg") 50% 50% no-repeat;
         background-size: auto 100%; }
 
 /*# sourceMappingURL=style.css.map */
