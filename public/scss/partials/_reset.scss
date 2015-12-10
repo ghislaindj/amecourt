@@ -45,64 +45,149 @@ body{background-color: $grey-0;}
 html, body{ height: 100%; }
 
 *{
-    font-family: 'proxima-nova', sans-serif;
-    font-weight: 500;
-    color: $dark-grey;
-    box-sizing: border-box;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 500;
+  color: $dark-grey;
+  box-sizing: border-box;
 }
 
 html, body, input, button, select, textarea, table, h3, h4, h5, h6 {
-    font-family: 'proxima-nova', sans-serif;
-    font-weight: 500;
-    color: $dark-grey;
-    font-size: 14px;
-    margin: 0;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 500;
+  color: $dark-grey;
+  font-size: 14px;
+  margin: 0;
 }
 
 h1, h2{
-    font-family: 'proxima-nova', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
+  //  font-family: 'proxima-nova', sans-serif;
+  //  font-weight: 500;
+  //  text-transform: uppercase;
 }
-h1{font-size: 32px;}
+h1{
+  //  font-size: 32px;
+}
 h2{font-size: 35px;}
 h3{font-size: 28px;font-weight: 200;}
 
 h4{
-    text-align: center;
-    font-style: italic;
-    font-size: 20px;
-    margin: 30px 0 30px 0;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  margin: 30px 0 30px 0;
 }
 
 ul{
-    list-style: none;
-    margin: 0; padding: 0;
-    li{padding: 0;}
+  list-style: none;
+  margin: 0; padding: 0;
+  li{padding: 0;}
 }
 
 #container, header .content{
-    max-width: $break-xlarge;
-    min-width: $break-xsmall;
-    margin: auto;
+  max-width: $break-xlarge;
+  min-width: $break-xsmall;
+  margin: auto;
 }
 
 #container{
-    position: relative;
-    overflow: hidden;
-    min-height: 100%;
-    //    margin-top: -40px;
-    padding: 40px 0 158px 0;
-    @media (max-width: $break-small){padding: 40px 0 218px 0;}
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  //    margin-top: -40px;
+  padding: 40px 0 158px 0;
+  @media (max-width: $break-small){padding: 40px 0 218px 0;}
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
 
-    &.imgback{
-        background: url("../img/back-blurred.jpg") 50% 40% no-repeat;
-        background-size: 100% auto;
-        background-attachment: fixed;
-    }
+  &.imgback{
+    background-color: #969696;
+    background-image: url("../img/back-blurred.jpg");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+  }
 }
 
 .img-circle {
-    border-radius: 50%;
+  border-radius: 50%;
+}
+
+.txt-bloc{
+  max-width: 840px;
+  padding: 0 20px;
+  margin: auto;
+  //  text-align: center;
+  box-sizing: border-box;
+
+  h1{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: $dark-grey;
+    margin: 0 0 18px 0;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $dark-grey;
+    margin: 0 0 6px 0;
+  }
+
+  p{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: $dark-grey;
+    margin: 0 0 12px 0;
+
+    &.btns{
+      margin-top: 24px;
+      text-align: center;
+      
+      .btn{margin-bottom: 6px;}
+    }
+  }
+}
+
+.home-txt-bloc{
+  max-width: 940px;
+  padding: 0 20px;
+  margin: 12px auto 30px auto;
+    text-align: center;
+  box-sizing: border-box;
+
+  h1{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: $dark-grey;
+    margin: 0 0 18px 0;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $dark-grey;
+    margin: 0 0 6px 0;
+  }
+
+  p{
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: $dark-grey;
+    margin: 0 0 12px 0;
+
+    &.btns{
+      margin-top: 24px;
+      text-align: center;
+      
+      .btn{margin-bottom: 6px;}
+    }
+  }
 }
