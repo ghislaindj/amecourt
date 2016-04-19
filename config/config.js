@@ -36,7 +36,7 @@ var config = {
         pass: secret.mandrill.password,
       },
       defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>',
-      defaultToAddress: 'tech@chateau-amecourt.com'
+      defaultToAddress: 'contact@chateau-amecourt.com'
     }
   }
 };
