@@ -1,5 +1,5 @@
 var secret = {
-    mandrill: {
+    mailjet: {
         user: "tech@chateau-amecourt.com",
         password: "apasswordhere"
     }

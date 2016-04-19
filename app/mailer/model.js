@@ -10,7 +10,7 @@ var config = require('../../config/config'),
 var EmailAddressRequiredError = new Error('email address required');
 
 var transporter = nodemailer.createTransport({
-    service: 'Mandrill',
+    service: 'Mailjet',
     auth: {
         user: config.mailer.auth.user,
         pass: config.mailer.auth.pass
