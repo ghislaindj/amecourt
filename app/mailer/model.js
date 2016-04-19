@@ -21,7 +21,7 @@ var sendBookingNotification = function(contact, fn) {
     console.log("sendBookingNotification", contact);
     var locals = {
         toEmail: config.mailer.defaultToAddress,
-        fromEmail: contact.email.length > 0  ? contact.email : config.mailer.defaultFromAddress,
+        fromEmail: config.mailer.defaultFromAddress,//contact.email.length > 0  ? contact.email : config.mailer.defaultFromAddress,
         subject: 'Une nouvelle demande de réservation',
         contact: contact
     };
