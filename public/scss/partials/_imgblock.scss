@@ -1,63 +1,63 @@
 .img-block{
-    .block{
-        display: inline-block;
-        vertical-align: top;
-        height: 27vw;
-        width: 33.333%;
-        position: relative;
-        @media (max-width: $break-medium){height: 40vw;}
-        @media (max-width: $break-small){width: 100%; height: 220px;}
-        @media (min-width: $break-xlarge){height: 460px;}
+  .block{
+    display: inline-block;
+    vertical-align: top;
+    height: 27vw;
+    width: 33.333%;
+    position: relative;
+    @media (max-width: $break-medium){height: 40vw;}
+    @media (max-width: $break-small){width: 100%; height: 220px;}
+    @media (min-width: $break-xlarge){height: 460px;}
 
-        .spacer{
-            position: absolute;
-            top: 10px; right: 10px; bottom: 10px; left: 10px;
-            line-height: 27vw;
-            border: solid rgb(199, 202, 208) 1px;
-            border-radius: 4px;
-            overflow: hidden;
-            background-color: rgb(242, 243, 244);
-            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-            //                transition: all ease-out 0.5s;
+    .spacer{
+      position: absolute;
+      top: 10px; right: 10px; bottom: 10px; left: 10px;
+      line-height: 27vw;
+      border: solid rgb(199, 202, 208) 1px;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: rgb(242, 243, 244);
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+      //                transition: all ease-out 0.5s;
 
-            @media (max-width: $break-medium){line-height: 40vw;}
-            @media (max-width: $break-small){line-height: 220px;}
-            @media (min-width: $break-xlarge){line-height: 460px;}
+      @media (max-width: $break-medium){line-height: 40vw;}
+      @media (max-width: $break-small){line-height: 220px;}
+      @media (min-width: $break-xlarge){line-height: 460px;}
 
-            &:hover{
-                .cover {
-                    background-color: rgba(0, 0, 0, 0.2);
-                }
-            }
-
-            .cover{
-                position: absolute;
-                top: 0; left: 0;
-                width: 100%; height: 100%;
-                background-color: rgba(0, 0, 0, 0);
-                transition: all ease-out 0.5s;
-            }
-
-
-            .title{
-                display: inline-block;
-                vertical-align: middle;
-                width: 100%;
-                padding: 0 20px;
-                font-size: 26px;
-                line-height: 30px;
-                text-align: center;
-                color: white;
-                text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.6);
-                @media (max-width: $break-medium){font-size: 20px; line-height: 22px;}
-
-                .price{
-                    font-size: 20px;
-                    color: white;
-                    @media (max-width: $break-medium){font-size: 16px;}
-                }
-            }
+      &:hover{
+        .cover {
+          background-color: rgba(0, 0, 0, 0.2);
         }
+      }
+
+      .cover{
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all ease-out 0.5s;
+      }
+
+
+      .title{
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.6);
+        @media (max-width: $break-medium){font-size: 20px; line-height: 22px;}
+
+        .price{
+          font-size: 20px;
+          color: white;
+          @media (max-width: $break-medium){font-size: 16px;}
+        }
+      }
     }
+  }
 
 }

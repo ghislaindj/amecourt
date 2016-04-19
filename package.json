@@ -14,7 +14,7 @@
     "ejs": "~1.0.0",
     "email-templates": "^1.1.2",
     "express": "~4.2.0",
-    "formage": "git://github.com/TheNodeILs/formage",
+    "formage": "~3.2.21",
     "glob": "~4.0.5",
     "method-override": "~2.1.1",
     "moment": "^2.8.3",

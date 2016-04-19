@@ -14,8 +14,8 @@ var config = {
     publicUrl: 'http://localhost:3000',
     mailer: {
       auth: {
-        user: secret.mandrill.user,
-        pass: secret.mandrill.password,
+        user: secret.mailjet.user,
+        pass: secret.mailjet.password,
       },
       defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>',
       defaultToAddress: 'tech@chateau-amecourt.com'
@@ -32,8 +32,8 @@ var config = {
     publicUrl: 'http://www.chateau-amecourt.com',
     mailer: {
       auth: {
-        user: secret.mandrill.user,
-        pass: secret.mandrill.password,
+        user: secret.mailjet.user,
+        pass: secret.mailjet.password,
       },
       defaultFromAddress: 'Tech Amecourt <tech@chateau-amecourt.com>',
       defaultToAddress: 'contact@chateau-amecourt.com'

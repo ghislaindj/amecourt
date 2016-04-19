@@ -1,0 +1,138 @@
+#pictures{
+
+  article{
+    border-bottom: solid $grey-4 3px;
+    background-color: $grey-0;
+
+    section{
+      &:not(:last-child){border-bottom: solid rgb(207, 209, 223) 6px;}
+      padding: 30px 0 60px 0;
+
+      .img-block{
+        margin-bottom: 12px;
+        .block{ width: 100%; }
+
+        .block{
+          height: 500px;
+          @media (max-width: $break-medium){height: 500px;}
+          @media (max-width: $break-small){height: 350px;}
+          @media (max-width: $break-msmall){height: 300px;}
+          @media (max-width: $break-xsmall){height: 200px;}
+          @media (min-width: $break-xlarge){height: 500px;}
+
+          .spacer{left: 0; right: 0;}
+        }
+
+        .img{
+          max-width: 100%;
+          height: 100%;
+        }
+
+        .pics-1{
+          background: url("../img/pics-1.png") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .pics-2{
+          background: url("../img/pics-2.png") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .event-1{
+          background: url("../img/event-1.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .event-2{
+          background: url("../img/event-2.png") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .event-3{
+          background: url("../img/event-3.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .event-4{
+          background: url("../img/event-4.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .histo-1{
+          background: url("../img/castle-history-1.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .histo-2{
+          background: url("../img/castle-history-2.jpg") 50% 50% no-repeat;
+          background-size: auto 110%;
+        }
+        .histo-3{
+          background: url("../img/castle-history-3.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .site-1{
+          background: url("../img/castle-site-1.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .img-1{
+          background: url("../img/main-img-1.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .img-2{
+          background: url("../img/main-img-2.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .img-3{
+          background: url("../img/main-img-3.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .img-4{
+          background: url("../img/main-img-4.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .img-5{
+          background: url("../img/main-img-5.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .room-1{
+          background: url("../img/room-1-1.jpg") 50% 50% no-repeat;
+          background-size: auto 140%;
+        }
+        .room-2{
+          background: url("../img/room-2-1.jpg") 50% 50% no-repeat;
+          background-size: auto 140%;
+        }
+        .room-3{
+          background: url("../img/room-4-1.jpg") 50% 50% no-repeat;
+          background-size: auto 140%;
+        }
+        .room-4{
+          background: url("../img/main-rooms.jpg") 50% 50% no-repeat;
+          background-size: auto 130%;
+        }
+        .food{
+          background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgb-1{
+          background: url("../img/main-event-1.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgb-2{
+          background: url("../img/main-event-2.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgb-3{
+          background: url("../img/main-event-3.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgc-1{
+          background: url("../img/main-castle-1.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgc-2{
+          background: url("../img/main-castle-2.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+        .imgc-3{
+          background: url("../img/main-castle-3.jpg") 50% 50% no-repeat;
+          background-size: auto 100%;
+        }
+      }
+    }
+  }
+}
